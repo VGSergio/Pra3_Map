@@ -4,8 +4,8 @@ generic
    type item is private;
    with function hash (k: in key; b: in Positive) return Natural;
    size: Positive; --número primo
-
-package hashing is
+   
+package clhashing is
 
    type conjunto is limited private;
    type iterador is limited private;
@@ -25,24 +25,24 @@ package hashing is
    procedure siguiente (s: in conjunto; it: in out iterador);
    function es_valido (it: in iterador) return boolean;
    procedure obtener (s: in conjunto; it: in iterador; k: out key; x:out item);
-
+   
 private
-
-   b: constant natural := size;
-   type nodo;
-   type pnodo is access nodo;
-   type nodo is record
+   
+   b: constant natural:= size;
+   max_ne: constant natural:= size* 8/10;
+   type estado_celda is (libre, usada);
+   type celda is record
       k: key;
       x: item;
-      sig: pnodo;
+      st: estado_celda;
    end record;
-   type dispersion_table is array (Natural range 0..b-1) of pnodo;
+   type dispersion_table is array(natural range 0..b-1) of celda;
    type conjunto is record
       dt: dispersion_table;
+      ne: natural; -- número de elementos guardados
    end record;
    type iterador is record
-      i: Natural; --posición en tabla dispersión
-      p: pnodo;   --puntero al nodo
+      i: Natural;
    end record;
-   
-end hashing;
+
+end clhashing;

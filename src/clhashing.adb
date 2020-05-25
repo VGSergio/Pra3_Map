@@ -1,49 +1,56 @@
-package body hashing is
+package body clhashing is
 
    procedure cvacio (s: out conjunto) is
-      dt: dispersion_table renames s.dt;
+      d: dispersion_table renames s.dt;
+      ne: Natural renames s.ne;
    begin
       for i in 0..b-1 loop
-         dt(i):= null;
+         d(i).st:= libre;
       end loop;
+      ne:=0;
    end cvacio;
 
    procedure poner (s: in out conjunto; k: in key; x: in item) is
-      dt: dispersion_table renames s.dt;
-      i: Natural;
-      p: pnodo;
+      d: dispersion_table renames s.dt;
+      ne: natural renames s.ne;
+      i0, i: natural; -- posicion inicial y actual
+      na: natural; -- número de intentos
    begin
-      i:=hash(k, b); p:=dt(i);
-      --recorrer la lista, que sea diferente de null y
-      --no encontrar la clave
-      while p/=null and then p.k/=k loop
-         p:=p.sig;
+      i0:= hash(k, b);
+      i:= i0;
+      na:= 0;
+      while d(i).st=usada and then d(i).k/=k loop
+         na:= na+1;
+         i:= (i0+na*na) mod b;
       end loop;
-      if p/=null then
+      if d(i).st=used then
          raise ya_existe;
       end if;
-      p:= new node;            -- crear celda
-      p.all:=(k, x, null);     -- llenar celda
-      p.sig:=dt(i); dt(i):=p;  -- insertar al principio de la lista
-   exception
-      when Storage_Error => raise espacio_desbordado;   
+      if ne=max ne then
+         raise espacio_desbordado;
+      end if;
+      d(i).st:= usada; -- marcar celda como utilizada
+      d(i).k:= k; d(i).x:= x; -- rellenar celdan
+      e:= ne+1; -- contar celda   
    end poner;
    
    procedure consultar (s: in conjunto; k: in key; x: out item) is
-      dt: dispersion_table renames s.dt;
-      i: natural;
-      p: pnodo;
+      d: dispersion_table renames s.dt;
+      i0, i: natural; -- posición inicial y actual
+      na: natural; -- número de intentos
    begin
-      i:= hash(k, b); p:= dt(i);
-      while p/=null and then p.k/=k loop
-         p:= p.sig;
+      i0:= hash(k, b); i:= i0; na:= 0;
+      while d(i).st=usada and then d(i).k/=k loop
+         na:= na+1;
+         i:= (i0+na*na) mod b;
       end loop;
-      if p=null then
+      if d(i).st=libre then
          raise no_existe;
-      end if ;   
-      x:= p.x;  -- p.x:= x; para actualizar
+      end if;
+      x:= d(i).x; -- d(i).x:= x; para el actualizar
    end consultar; 
    
+   --borrar no hecho
    procedure borrar (s: in out conjunto; k: in key) is
       dt: dispersion_table renames s.dt;
       i: natural;
@@ -73,45 +80,41 @@ package body hashing is
    procedure primero (s: in conjunto; it: out iterador) is
       dt: dispersion_table renames s.dt;
       i: natural renames it.i;
-      p: pnodo renames it.p;
    begin
-      --busca primer elemento no nulo
       i:= 0;
-      while i<b-1 and dt(i)=null loop
+      while i < b and then dt(i).st=free loop
          i:= i+1;
       end loop;
-      p:= dt(i);
    end primero;
    
    procedure siguiente (s: in conjunto; it: in out iterador) is
       dt: dispersion_table renames s.dt;
       i: natural renames it.i;
-      p: pnodo renames it.p;
    begin
-      if p=null then
+      if i=b then
          raise bad_use;
       end if;
-      p:= p.next; --si está dentro de lista enlazada
-      if p=null and i<b-1 then --sino, siguiente posición de la td
+      i:= i+1;
+      while i < b and then dt(i).st=free loop
          i:= i+1;
-         while i<b-1 and dt(i)=null loop
-            i:= i+1;
-         end loop;
-         p:= dt(i);
-      end if;
+      end loop;
    end siguiente;  
    
    function es_valido (it: in iterador) return boolean is
-      p: pnodo renames it.p;
+      i: natural renames it.i;
    begin
-      return p/=null;
+      return i<b;
    end es_valido;
    
    procedure obtener (s: in conjunto; it: in iterador; k: out key; x: out item) is
-      p: pnodo renames it.p;
+      dt: dispersion_table renames s.dt;
+      i: natural renames it.i;
    begin
-      k:= p.k;
-      x:= p.x;
+      if i=b then
+         raise bad_use;
+      end if;
+      k:=dt(i).k;
+      x:= dt(i).x;
    end obtener;
-   
-end hashing;
+
+end clhashing;
