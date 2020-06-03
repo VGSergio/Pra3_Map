@@ -21,7 +21,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U main%b		main.adb		567ca321 NE OO SU
+U main%b		main.adb		3626422a NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -53,7 +53,7 @@ D hashing.ads		20200603181746 dff3156b hashing%s
 D hashing.adb		20200603181746 23100564 hashing%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D main.adb		20200603184256 6008ee5c main%b
+D main.adb		20200603214412 00520f57 main%b
 D system.ads		20200228061810 32a08138 system%s
 D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
@@ -72,69 +72,68 @@ G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [hashing standard 9 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 17|1r6 1r23 2r6 2r29 3r6 3r29 4r6 27r10 30r11
+16K9*Ada 20e8 17|1r6 1r29 2r6 2r29 3r6 3r29 4r6 22r10 25r11
 X 2 a-contai.ads
-16K13*Containers 28e19 17|3w10 3r33 27r14
-19M9*Hash_Type 17|27r25 30r35
+16K13*Containers 28e19 17|3w10 3r33 22r14
+19M9*Hash_Type 17|22r25 25r35
 X 4 a-flteio.ads
 20K13*Float_Text_IO[11|46] 17|2w10 2r33
 X 7 a-string.ads
-16K13*Strings 35e16 17|4r10 30r15
+16K13*Strings 35e16 17|4r10 25r15
 X 8 a-strhas.ads
-20V22*Hash{2|19M9} 17|4w18 30s23
+20V22*Hash{2|19M9} 17|4w18 25s23
 X 10 a-textio.ads
-57K13*Text_IO 727e16 17|1w10 1r27
-64P9*File_Type 17|48r13
-66n23*In_File{66E9} 17|61r21
-114U14*Open 17|61s7
-129U14*Close 17|81s7
-264U14*New_Line 17|73s47
-312V13*End_Of_File{boolean} 17|62s17
-378U14*Get 17|63s10 67s13
-465U14*Put 17|73s10
+57K13*Text_IO 727e16 17|1w10 1r33
+64P9*File_Type 17|51r16
+66n23*In_File{66E9} 17|54r21
+114U14*Open 17|54s7
+129U14*Close 17|72s7
+264U14*New_Line 17|68s50 85s4 91s4
+312V13*End_Of_File{boolean} 17|55s17
+378U14*Get 17|57s10 62s13
+465U14*Put 17|68s13
+508U14*Put_Line 17|86s4 92s4
 X 11 a-tiflio.ads
-52U14*Get 17|70s10[4|20]
-82U14*Put 17|73s27[4|20]
+52U14*Get 17|65s10[4|20]
+82U14*Put 17|68s30[4|20]
 X 13 hashing.ads
-3+9 key 17|44r7
-4+9 item 17|44r25
-5V18 hash{natural} 17|44r40
-6i4 size{positive} 17|44r54
-7V19 "="{boolean} 17|44r70
-9k9*hashing 49e12 17|5w6 43r38
-11R9 conjunto 17|50r26[43]
-19U14 cvacio 17|60s7[43]
-20U14 poner 17|74s10[43]
+3+9 key 17|39r7
+4+9 item 17|39r25
+5V18 hash{natural} 17|39r40
+6i4 size{positive} 17|39r54
+7V19 "="{boolean} 17|39r70
+9k9*hashing 49e12 17|5w6 38r38
+11R9 conjunto 17|43r26[38]
+19U14 cvacio 17|53s7[38]
+20U14 poner 17|70s10[38]
 X 17 main.adb
-6U11*Main 6b11 106l5 106t9
-9i4 Length{positive} 10r38 20r23 57r22 75r22
-10A12 Municipio{string}<integer> 13r52 26r25 38r30 44r14 55r13
-13U14 Llena_Municipio 13b14 13>31 13<45 23l8 23t23 72s10
-13a31 s{string} 16r16 17r16
-13a45 m{10A12} 17m10 21m10
-14i7 idx{integer} 18m10 20r16
-16i11 N{integer} 17r12 17r18 18r15
-20i11 I{integer} 21r12
-26V13 Hash{natural} 26b13 26>19 26>36 33l8 33t12 44r48
-26a19 k{10A12} 30r28
-26i36 b{positive} 30r45
-27m7 h{2|19M9} 30m7 31r19
-28i7 s{natural} 31m7 32r14
-36i4 primo{integer} 44r62
-38V13 igual{boolean} 38b13 38>19 38>23 41l8 41t13 44r76
-38a19 x1{10A12} 40r14
-38a23 x2{10A12} 40r17
-43K12 municipios_hashing[13|9] 45r8 50r7
-47a4 datos{string} 105r18
-48p4 fichero{10|64P9} 61m12 61r12 62r29 63r14 67r17 70r14 81m13 81r13
-50r4 s{13|11R9[43]} 60m14 74m16 74r16
-52U14 Obtener_Datos 52b14 52>29 82l8 82t21 105s4
-52a29 file{string} 61r30
-53e7 c{character} 63m23 65r23 67m26 68r30
-54b7 separatorFound{boolean} 64r20 68m13 79m10
-55a7 name{10A12} 72m41 73r14 74r19
-56f7 area{float} 70m23 73r31 74r25
-57a7 aux{string} 65m13 72r26 76m13
-58i7 idx{integer} 65r17 66m13 66r19 72r33 78m10
-75i14 I{integer} 76r17
+6U11*Main 6b11 96l5 96t9
+9i4 Length{positive} 10r38
+10A12 Municipio{string}<integer> 13r38 21r25 33r30 39r14 48r13
+13U14 Llena_Municipio 13b14 13<31 13>49 18l8 18t23 66s10
+13a31 m{10A12} 15r21 16m10
+13i49 idx{positive} 15r16
+15i11 I{integer} 16r12
+21V13 Hash{natural} 21b13 21>19 21>36 28l8 28t12 39r48
+21a19 k{10A12} 25r28
+21i36 b{positive} 25r45
+22m7 h{2|19M9} 25m7 26r19
+23i7 s{natural} 26m7 27r14
+31i4 primo{integer} 39r62
+33V13 igual{boolean} 33b13 33>19 33>23 36l8 36t13 39r76
+33a19 x1{10A12} 35r14
+33a23 x2{10A12} 35r17
+38K12 municipios_hashing[13|9] 40r8 43r7
+42a4 datos{string} 87r18
+43r4 s{13|11R9[38]} 53m14 70m16 70r16
+45U14 Obtener_Datos 45b14 45>29 45>43 45>65 73l8 73t21 87s4
+45a29 file{string} 54r30
+45e43 separator{character} 58r29 63r32
+45b65 mostrarDatos{boolean} 67r13
+46e7 c{character} 57m23 58r27 60r24 62m26 63r30
+47b7 separatorFound{boolean} 58m10 59r20 63m13
+48a7 name{10A12} 60m13 66m26 68r17 70r19
+49f7 area{float} 65m23 68r34 70r25
+50i7 idx{integer} 56m10 60r18 61m13 61r19 66r32
+51p7 fichero{10|64P9} 54m12 54r12 55r29 57r14 62r17 65r14 72m13 72r13
 

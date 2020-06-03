@@ -1,23 +1,18 @@
-with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
 with hashing;
 procedure Main is
 
-   --Primera semana-------------------------
+   --Segunda semana-------------------------
    Length: Positive := 30;
    subtype Municipio is String (1 .. Length);
 
    --Metodo para rellenar el String Municipio hasta su rango máximo
-   procedure Llena_Municipio (s: in String; m: out Municipio) is
-      idx: Integer;
+   procedure Llena_Municipio (m: out Municipio; idx: in Positive) is
    begin
-      for N in s'Range loop
-         m(N):=s(N);
-         idx:=N;
-      end loop;
-      for I in idx+1..Length loop
+      for I in idx..m'Last loop
          m(I):= ' ';
       end loop;
    end Llena_Municipio;
@@ -32,7 +27,7 @@ procedure Main is
       return s;
    end Hash;
 
-   --Mallorca tiene 67 municipios, el número primo mayor o igual el 67
+   --Mallorca tiene 67 municipios, el siguiente número primo mayor o igual es 67
    primo: Integer := 67;
 
    function igual(x1, x2: in Municipio) return Boolean is
@@ -45,62 +40,57 @@ procedure Main is
    use municipios_hashing;
 
    datos: String := "municipis_superficie_mallorca.txt";
-   fichero: File_Type;
-
    s: municipios_hashing.conjunto;
 
-   procedure Obtener_Datos (file: String) is
+   procedure Obtener_Datos (file: String; separator: Character; mostrarDatos: Boolean) is
       c: Character;
-      separatorFound: boolean := false;
+      separatorFound: boolean;
       name: Municipio; -- Nombre del municipio
       area: Float;     -- Area/superficie del municipio
-      aux: String(1..Length);
-      idx: Integer := 1;
+      idx: Integer;
+      fichero: File_Type;
    begin
       cvacio(s);
       Open(fichero, In_File, file);
       while not End_Of_File(fichero) loop
+         idx:=1;
          get(fichero, c);
+         separatorFound:= c=separator;
          while not separatorFound loop
-            aux(idx):=c;
+            name(idx):=c;
             idx:= idx+1;
             get(fichero, c);
-            separatorFound:= c=';';
+            separatorFound:= c=separator;
          end loop;
          Get(fichero, area);
-         --Put(aux(1..idx-1) & " "); put(area, 0, 2, 0); New_Line;
-         Llena_Municipio(aux(1..idx-1), name);
-         Put(name & " "); put(area, 0, 2, 0); New_Line;
+         Llena_Municipio(name, idx);
+         if mostrarDatos then
+            Put(name & " "); put(area, 0, 2, 0); New_Line;
+         end if;
          poner(s, name, area);
-         for I in 1..Length loop
-            aux(I):= ' ';
-         end loop;
-         idx:=1;
-         separatorFound:=false;
       end loop;
       Close(fichero);
    end Obtener_Datos;
    -----------------------------------------
 
-   --m1,m2,m3: Municipio;
-   --c: Boolean;
-   --h: Hash_Type;
-   --n: Natural;
+   --Tercera semana-------------------------
+
+
+
+   -----------------------------------------
 
 begin
 
-   --Llena_Municipio("Caca", m1);
-   --Llena_Municipio("acac", m2);
-   --Llena_Municipio("Caca", m3);
-   --c:= igual(m1, m2); Put_Line(c'Image);
-   --c:= igual(m1, m3); Put_Line(c'Image);
-   --c:= igual(m2, m3); Put_Line(c'Image);
-   --Put_Line(m1);
+   --Segunda semana-------------------------
+   New_Line;
+   Put_Line("Segunda Semana");
+   Obtener_Datos(datos, ';', true);
+   -----------------------------------------
 
-   --h:=Ada.Strings.Hash(m1); Put_Line(h'Image);
-   --h:=Ada.Strings.Hash(m3); Put_Line(h'Image);
+   --Tercera semana-------------------------
+   New_Line;
+   Put_Line("Tercera Semana");
 
-   --n:= Hash(m1, Length); Put_Line(n'Image);
-   --n:= Hash(m2, Length); Put_Line(n'Image);
-   Obtener_Datos(datos);
+   -----------------------------------------
+
 end Main;
