@@ -67,11 +67,10 @@ procedure Main is
             get(fichero, c);
             separatorFound:= c=';';
          end loop;
-         --Put(aux(1..idx-1) & " ");
-         Get(fichero, area); --put(area, 0, 2, 0);
-         New_Line;
+         Get(fichero, area);
+         --Put(aux(1..idx-1) & " "); put(area, 0, 2, 0); New_Line;
          Llena_Municipio(aux(1..idx-1), name);
-         Put(name & " "); put(area, 0, 2, 0);
+         Put(name & " "); put(area, 0, 2, 0); New_Line;
          poner(s, name, area);
          for I in 1..Length loop
             aux(I):= ' ';

@@ -21,7 +21,7 @@ RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 
-U main%b		main.adb		fc684979 NE OO SU
+U main%b		main.adb		567ca321 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -53,7 +53,7 @@ D hashing.ads		20200603181746 dff3156b hashing%s
 D hashing.adb		20200603181746 23100564 hashing%b
 D interfac.ads		20200228061810 5ab55268 interfaces%s
 D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D main.adb		20200603183402 ca1c0404 main%b
+D main.adb		20200603184256 6008ee5c main%b
 D system.ads		20200228061810 32a08138 system%s
 D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
 D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
@@ -87,14 +87,14 @@ X 10 a-textio.ads
 64P9*File_Type 17|48r13
 66n23*In_File{66E9} 17|61r21
 114U14*Open 17|61s7
-129U14*Close 17|82s7
-264U14*New_Line 17|72s10
+129U14*Close 17|81s7
+264U14*New_Line 17|73s47
 312V13*End_Of_File{boolean} 17|62s17
 378U14*Get 17|63s10 67s13
-465U14*Put 17|74s10
+465U14*Put 17|73s10
 X 11 a-tiflio.ads
-52U14*Get 17|71s10[4|20]
-82U14*Put 17|74s27[4|20]
+52U14*Get 17|70s10[4|20]
+82U14*Put 17|73s27[4|20]
 X 13 hashing.ads
 3+9 key 17|44r7
 4+9 item 17|44r25
@@ -104,12 +104,12 @@ X 13 hashing.ads
 9k9*hashing 49e12 17|5w6 43r38
 11R9 conjunto 17|50r26[43]
 19U14 cvacio 17|60s7[43]
-20U14 poner 17|75s10[43]
+20U14 poner 17|74s10[43]
 X 17 main.adb
-6U11*Main 6b11 107l5 107t9
-9i4 Length{positive} 10r38 20r23 57r22 76r22
+6U11*Main 6b11 106l5 106t9
+9i4 Length{positive} 10r38 20r23 57r22 75r22
 10A12 Municipio{string}<integer> 13r52 26r25 38r30 44r14 55r13
-13U14 Llena_Municipio 13b14 13>31 13<45 23l8 23t23 73s10
+13U14 Llena_Municipio 13b14 13>31 13<45 23l8 23t23 72s10
 13a31 s{string} 16r16 17r16
 13a45 m{10A12} 17m10 21m10
 14i7 idx{integer} 18m10 20r16
@@ -125,16 +125,16 @@ X 17 main.adb
 38a19 x1{10A12} 40r14
 38a23 x2{10A12} 40r17
 43K12 municipios_hashing[13|9] 45r8 50r7
-47a4 datos{string} 106r18
-48p4 fichero{10|64P9} 61m12 61r12 62r29 63r14 67r17 71r14 82m13 82r13
-50r4 s{13|11R9[43]} 60m14 75m16 75r16
-52U14 Obtener_Datos 52b14 52>29 83l8 83t21 106s4
+47a4 datos{string} 105r18
+48p4 fichero{10|64P9} 61m12 61r12 62r29 63r14 67r17 70r14 81m13 81r13
+50r4 s{13|11R9[43]} 60m14 74m16 74r16
+52U14 Obtener_Datos 52b14 52>29 82l8 82t21 105s4
 52a29 file{string} 61r30
 53e7 c{character} 63m23 65r23 67m26 68r30
-54b7 separatorFound{boolean} 64r20 68m13 80m10
-55a7 name{10A12} 73m41 74r14 75r19
-56f7 area{float} 71m23 74r31 75r25
-57a7 aux{string} 65m13 73r26 77m13
-58i7 idx{integer} 65r17 66m13 66r19 73r33 79m10
-76i14 I{integer} 77r17
+54b7 separatorFound{boolean} 64r20 68m13 79m10
+55a7 name{10A12} 72m41 73r14 74r19
+56f7 area{float} 70m23 73r31 74r25
+57a7 aux{string} 65m13 72r26 76m13
+58i7 idx{integer} 65r17 66m13 66r19 72r33 78m10
+75i14 I{integer} 76r17
 

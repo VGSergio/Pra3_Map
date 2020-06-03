@@ -11,22 +11,33 @@ package body d_graph is
    begin
       p:= new cell;
       p.all:=(y, d, null);
-      g(x):=p;
+      g(x).next:=p;
       p.x:=(x);
-      g(y):=p:
+      g(y).next:=p:
    end put_edge;
    
    procedure remove_edge (g: in out graph; x,y: in vertex) is
       
    begin
-      null;
+      while not g(x).next=null loop
+         if g(x).x=y then g(x).x=null; end if;
+      end loop;
+      while not g(Y).next=null loop
+         if g(y).x=x then g(y).x=null; end if;
+      end loop;
    end remove_edge;
    
    function get_distance (g: in graph; x,y : in vertex) return distance is
    begin
-      return 0.0;
+      while not g(x).next=null loop
+         if g(x).x=y then 
+            return g(x).d; 
+         end if;
+      end loop;
+      raise does_not_exist;
    end get_distance;   
    
+
    procedure first (g: in  graph; x: in vertex; it: out iterator) is
    begin
       null;
