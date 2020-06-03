@@ -22,7 +22,7 @@ package body hashing is
       if p/=null then
          raise ya_existe;
       end if;
-      p:= new node;            -- crear celda
+      p:= new nodo;            -- crear celda
       p.all:=(k, x, null);     -- llenar celda
       p.sig:=dt(i); dt(i):=p;  -- insertar al principio de la lista
    exception
@@ -89,9 +89,9 @@ package body hashing is
       p: pnodo renames it.p;
    begin
       if p=null then
-         raise bad_use;
+         raise mal_uso;
       end if;
-      p:= p.next; --si está dentro de lista enlazada
+      p:= p.sig; --si está dentro de lista enlazada
       if p=null and i<b-1 then --sino, siguiente posición de la td
          i:= i+1;
          while i<b-1 and dt(i)=null loop

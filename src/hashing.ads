@@ -4,6 +4,7 @@ generic
    type item is private;
    with function hash (k: in key; b: in Positive) return Natural;
    size: Positive; --número primo
+   with function "=" (k1: in key; k2: in key) return  boolean;
 
 package hashing is
 
