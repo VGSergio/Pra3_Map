@@ -28,6 +28,7 @@ private
    type pcell is access cell;
    type cell is record
       x: vertex;
+      d: distance;
       next : pcell;
    end record;
    type graph is array (vertex) of pcell;

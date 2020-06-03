@@ -50,5 +50,4 @@ package body d_graph is
       null;
    end get;
    
-
 end d_graph;
