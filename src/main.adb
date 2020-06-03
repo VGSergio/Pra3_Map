@@ -24,13 +24,11 @@ procedure Main is
 
    --Hash
    function Hash (k: in Municipio; b: in Positive) return Natural is
-      s, p: natural;
+      h: Ada.Containers.Hash_Type;
+      s: natural;
    begin
-      s:= 0;
-      for i in k'range loop
-         p:= character'pos(k(i)); -- código ASCII
-         s:= (s+p) mod b;
-      end loop;
+      h:= Ada.Strings.Hash(k) mod Hash_Type(b);
+      s:= Natural(h);
       return s;
    end Hash;
 
@@ -53,9 +51,9 @@ procedure Main is
 
    procedure Obtener_Datos (file: String) is
       c: Character;
-      b: boolean := false;
-      mncp: Municipio;
-      spf: Float;
+      separatorFound: boolean := false;
+      name: Municipio; -- Nombre del municipio
+      area: Float;     -- Area/superficie del municipio
       aux: String(1..Length);
       idx: Integer := 1;
    begin
@@ -63,23 +61,23 @@ procedure Main is
       Open(fichero, In_File, file);
       while not End_Of_File(fichero) loop
          get(fichero, c);
-         while not b loop
+         while not separatorFound loop
             aux(idx):=c;
             idx:= idx+1;
             get(fichero, c);
-            b:= c=';';
+            separatorFound:= c=';';
          end loop;
          --Put(aux(1..idx-1) & " ");
-         Get(fichero, spf); --put(spf, 0, 2, 0);
+         Get(fichero, area); --put(spf, 0, 2, 0);
          New_Line;
-         Llena_Municipio(aux, mncp);
-         Put(mncp & " ");
-         poner(s, mncp, spf);
+         Llena_Municipio(aux(1..idx-1), name);
+         Put(name & " ");
+         poner(s, name, area);
          for I in 1..Length loop
             aux(I):= ' ';
          end loop;
          idx:=1;
-         b:=false;
+         separatorFound:=false;
       end loop;
       Close(fichero);
    end Obtener_Datos;
