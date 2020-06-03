@@ -12,6 +12,8 @@ package body d_graph is
       p:= new cell;
       p.all:=(y, d, null);
       g(x):=p;
+      p.x:=(x);
+      g(y):=p:
    end put_edge;
    
    procedure remove_edge (g: in out graph; x,y: in vertex) is
@@ -50,5 +52,4 @@ package body d_graph is
       null;
    end get;
    
-
 end d_graph;

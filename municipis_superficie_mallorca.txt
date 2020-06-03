@@ -1,4 +1,4 @@
-Alaro;45.72
+Alaro;45.00
 Alcudia;60.02
 Algaida;89.78
 Andratx;81.46
