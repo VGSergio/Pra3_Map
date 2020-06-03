@@ -13,8 +13,8 @@ package d_graph is
    
    procedure empty (g: out graph);
    procedure put_edge (g: in out graph; x,y: in vertex; d: in distance);
-   procedure remove_edge (g: in outgraph; x,y: in vertex);
-   function get_distance (g: in graph; x, : in vertex) return distance;
+   procedure remove_edge (g: in out graph; x,y: in vertex);
+   function get_distance (g: in graph; x,y: in vertex) return distance;
    
    procedure first (g: in  graph; x: in vertex; it: out iterator);
    procedure next (g: in graph; it: in out iterator);

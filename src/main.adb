@@ -2,7 +2,7 @@ with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
-with hashing;
+with hashing; with d_graph;
 procedure Main is
 
    --Segunda semana-------------------------

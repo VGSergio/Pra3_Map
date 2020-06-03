@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#3626422a#;
+   u00001 : constant Version_32 := 16#23c1aa4d#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#67c8d842#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -305,18 +305,24 @@ package ada_main is
    pragma Export (C, u00133, "ada__strings__hashB");
    u00134 : constant Version_32 := 16#3655ad4c#;
    pragma Export (C, u00134, "ada__strings__hashS");
-   u00135 : constant Version_32 := 16#fce3100f#;
-   pragma Export (C, u00135, "hashingB");
-   u00136 : constant Version_32 := 16#dff3156b#;
-   pragma Export (C, u00136, "hashingS");
-   u00137 : constant Version_32 := 16#fd83e873#;
-   pragma Export (C, u00137, "system__concat_2B");
-   u00138 : constant Version_32 := 16#300056e8#;
-   pragma Export (C, u00138, "system__concat_2S");
-   u00139 : constant Version_32 := 16#eca5ecae#;
-   pragma Export (C, u00139, "system__memoryB");
-   u00140 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00140, "system__memoryS");
+   u00135 : constant Version_32 := 16#8fea90bd#;
+   pragma Export (C, u00135, "d_graphB");
+   u00136 : constant Version_32 := 16#ac475cd5#;
+   pragma Export (C, u00136, "d_graphS");
+   u00137 : constant Version_32 := 16#458197ef#;
+   pragma Export (C, u00137, "graph_exceptionsS");
+   u00138 : constant Version_32 := 16#fce3100f#;
+   pragma Export (C, u00138, "hashingB");
+   u00139 : constant Version_32 := 16#dff3156b#;
+   pragma Export (C, u00139, "hashingS");
+   u00140 : constant Version_32 := 16#fd83e873#;
+   pragma Export (C, u00140, "system__concat_2B");
+   u00141 : constant Version_32 := 16#300056e8#;
+   pragma Export (C, u00141, "system__concat_2S");
+   u00142 : constant Version_32 := 16#eca5ecae#;
+   pragma Export (C, u00142, "system__memoryB");
+   u00143 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00143, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -456,6 +462,9 @@ package ada_main is
    --  ada.text_io.float_aux%b
    --  ada.float_text_io%s
    --  ada.float_text_io%b
+   --  graph_exceptions%s
+   --  d_graph%s
+   --  d_graph%b
    --  hashing%s
    --  hashing%b
    --  main%b

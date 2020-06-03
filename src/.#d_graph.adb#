@@ -3,7 +3,6 @@ package body d_graph is
 
    procedure empty (g: out graph) is
    begin
-      g:= new graph;
       for I in vertex'Range loop
          g(I).all:=(I, infty, null);
       end loop;
