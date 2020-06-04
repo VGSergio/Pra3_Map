@@ -15,7 +15,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U d_graph%b		d_graph.adb		a3923e5c NE OO PK GE IL
+U d_graph%b		d_graph.adb		e0eb1876 NE OO PK GE IL
 W graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
 
 U d_graph%s		d_graph.ads		ac475cd5 BN EE NE OO PK GE IL
@@ -23,7 +23,7 @@ U d_graph%s		d_graph.ads		ac475cd5 BN EE NE OO PK GE IL
 D ada.ads		20190518041256 76789da1 ada%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D d_graph.ads		20200604102604 ac475cd5 d_graph%s
-D d_graph.adb		20200604102606 4a54f566 d_graph%b
+D d_graph.adb		20200604103236 092dd34c d_graph%b
 D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
 D system.ads		20190518041258 32a08138 system%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
@@ -79,8 +79,8 @@ X 3 d_graph.ads
 28P9 pcell(27R9) 32r14 34r36 36r11 4|16r14 45r19
 30i7 x{7I9} 4|24r21 31m9 35r21 52r18 69r18
 31f7 d{10F9} 4|56m18 73m18
-32p7 next{28P9} 4|22r32 23r20 27m13 33r32 34r20 38m13 51r18 54r25 59r29 61m21
-. 61r34 68r18 71r25 76r29 78m21 78r34
+32p7 next{28P9} 4|22r32 23r20 27m13 33r32 34r20 38m13 54r25 59r29 61m21 61r34
+. 71r25 76r29 78m21 78r34
 36p7 p{28P9}
 X 4 d_graph.adb
 5P12 pgraph(3|8A9) 6r11

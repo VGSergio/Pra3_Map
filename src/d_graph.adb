@@ -48,7 +48,7 @@ package body d_graph is
       curr:= g(x);
       prev:= null;
       -- x -> y
-      while curr.next/=null loop -- While not end of list
+      while curr/=null loop -- While not end of list
          if curr.x/=y then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
@@ -65,7 +65,7 @@ package body d_graph is
       -- y -> x
       curr:= g(y);
       prev:= null;
-      while curr.next/=null loop -- While not end of list
+      while curr/=null loop -- While not end of list
          if curr.x/=y then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
