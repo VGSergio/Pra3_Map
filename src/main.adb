@@ -82,13 +82,28 @@ procedure Main is
 
    procedure Semana_3 (g: out graph) is
       --min: distance;
+      it: iterator;
+      v: vertex;
+      d: distance;
    begin
+      -- Initialize vertices
       empty(g);
       put_edge(g, 1, 2, 3.0);
       put_edge(g, 1, 3, 1.0);
       put_edge(g, 1, 4, 5.0);
       put_edge(g, 2, 4, 1.0);
       put_edge(g, 3, 2, 1.0);
+
+      -- TO-DO: Shortest path from 4 to 1
+
+      -- Print the vertices connected to 4.
+      first(g, 4, it);
+      while is_valid(it) loop
+         get(g, it, v, d);
+         Put_Line("4 ->" & v'Image & ": " & d'Image & "km");
+         next(g, it);
+      end loop;
+
    end Semana_3;
    -----------------------------------------
 

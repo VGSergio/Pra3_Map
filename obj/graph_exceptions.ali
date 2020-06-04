@@ -1,4 +1,4 @@
-V "GNAT Lib v2020"
+V "GNAT Lib v2019"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -13,12 +13,12 @@ Z system%s		system.ads		system.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20200228061810 76789da1 ada%s
-D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
-D system.ads		20200228061810 32a08138 system%s
-D s-exctab.ads		20200228061810 54135002 system.exception_table%s
-D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D ada.ads		20190518041256 76789da1 ada%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
 G a e
 X 3 graph_exceptions.ads
 1K9*graph_exceptions 6l5 6e21

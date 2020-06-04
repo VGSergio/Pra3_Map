@@ -10,42 +10,26 @@ package body d_graph is
       end loop;
    end empty;
    
-   -- Puts an edge connecting two vertices given a distance
-   procedure put_edge (g: in out graph; x,y: in vertex; d: in distance) is 
+   procedure put_edge(g: in out graph; x,y: in vertex; d: in distance) is
       p: pcell;
-      found: Boolean := False;
    begin
+      
+      -- We first check if the edge already exists. As we place each edge twice,
+      -- there is no necessity to check y->x as well.
       p:= g(x);
+      while p/=null loop
+         if p.x=y then raise already_exists; end if;
+         p:=p.next;
+      end loop;
+      
       -- x -> y
-      while p/=null and not found loop -- While not end of list
-         if p.x=y then
-            found:= true;
-         else
-            p:= p.next;
-         end if;
-      end loop;
-      if not found then
-         --p.x:=y; p.d:= d; p.next:=null;
-         null;
-      else
-         raise already_exists;
-      end if;
-      found:= false;
-      p:= g(y);
+      p:= new cell;
+      p.all:=(y, d, g(x));
+      g(x):=p;
       -- y -> x
-      while p/=null and not found loop -- While not end of list
-         if p.x=x then
-            found:= true;
-         else
-            p:= p.next;
-         end if;
-      end loop;
-      if not found then
-         --p.x:=x; p.d:= d; p.next:=null;
-         null;
-      else
-         raise already_exists;
-      end if;
+      p:= new cell;
+      p.all:=(x, d, g(y));
+      g(y):=p;
    end put_edge;
    
    -- Removes an edge connecting two vertices.
@@ -111,8 +95,8 @@ package body d_graph is
    procedure first (g: in graph; x: in vertex; it: out iterator) is
       p: pcell renames it.p;
    begin
-      if g(x)=null then raise bad_use; end if;
-      p:= g(x).next;
+--      if g(x)=null then raise bad_use; end if;
+      p:= g(x);
    end first;
    
    -- Returns the next not null vertex on the iterator.
