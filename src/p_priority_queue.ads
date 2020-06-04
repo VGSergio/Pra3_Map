@@ -11,9 +11,9 @@ package p_priority_queue is
    bad_use: exception;
    
    procedure empty(q: out priority_queue); -- Makes an empty priority queue
-   procedure put(q: in out priority_queue; x: in item); -- Puts an item.
-   procedure delete_least(q: in out priority_queue); -- Deletes the least 
-   function get_least(q: in priority_queue) return item; -- Gets the least
+   procedure put(q: in out priority_queue; x: in item);    -- Puts an item.
+   procedure delete_least(q: in out priority_queue);       -- Deletes the least 
+   function get_least(q: in priority_queue) return item;   -- Gets the least
    function is_empty(q: in priority_queue) return boolean; -- Checks if the
                                                            -- queue is empty.
    
