@@ -1,4 +1,4 @@
-V "GNAT Lib v2019"
+V "GNAT Lib v2020"
 M P W=b
 A -gnatA
 A -mtune=generic
@@ -20,9 +20,8 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
-RV SPARK_05
 
-U main%b		main.adb		23c1aa4d NE OO SU
+U main%b		main.adb		bbc93429 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -32,54 +31,58 @@ W ada.strings.hash%s	a-strhas.adb		a-strhas.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W d_graph%s		d_graph.adb		d_graph.ali
+Z graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
 W hashing%s		hashing.adb		hashing.ali
 Z interfaces%s		interfac.ads		interfac.ali
+Z p_priority_queue%s	p_priority_queue.adb	p_priority_queue.ali
 Z system%s		system.ads		system.ali
 Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20190518041256 76789da1 ada%s
-D a-contai.ads		20190518041256 61e5e089 ada.containers%s
-D a-except.ads		20190518041256 291912d5 ada.exceptions%s
-D a-flteio.ads		20190518041256 e18a47a0 ada.float_text_io%s
-D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
-D a-string.ads		20190518041256 90ac6797 ada.strings%s
-D a-strhas.ads		20190518041258 c71c2a52 ada.strings.hash%s
-D a-tags.ads		20190518041258 491b781d ada.tags%s
-D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
-D a-tiflio.ads		20190518041256 bf196650 ada.text_io.float_io%s
-D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D d_graph.ads		20200604102604 ac475cd5 d_graph%s
-D d_graph.adb		20200604114908 2ff62e5f d_graph%b
-D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
-D hashing.ads		20200603164250 dff3156b hashing%s
-D hashing.adb		20200603164250 23100564 hashing%b
-D interfac.ads		20190518041256 5ab55268 interfaces%s
-D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20200604094040 b9f2bbe5 main%b
-D system.ads		20190518041258 32a08138 system%s
-D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
-D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
-D s-exctab.ads		20190518041256 54135002 system.exception_table%s
-D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
-D s-parame.ads		20190518041258 48ec542b system.parameters%s
-D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
-D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
-D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
-D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
-D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
-D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
-D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D ada.ads		20200228061810 76789da1 ada%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-except.ads		20200228061810 a7106115 ada.exceptions%s
+D a-flteio.ads		20200228061810 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
+D a-string.ads		20200228061810 90ac6797 ada.strings%s
+D a-strhas.ads		20200228061810 c71c2a52 ada.strings.hash%s
+D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
+D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
+D a-tiflio.ads		20200228061810 bf196650 ada.text_io.float_io%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200604151524 ac475cd5 d_graph%s
+D d_graph.adb		20200604151610 4484d3b1 d_graph%b
+D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
+D hashing.ads		20200604131510 dff3156b hashing%s
+D hashing.adb		20200604131510 23100564 hashing%b
+D interfac.ads		20200228061810 5ab55268 interfaces%s
+D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
+D main.adb		20200604151716 21fa2581 main%b
+D p_priority_queue.ads	20200604151526 281ad6ca p_priority_queue%s
+D system.ads		20200228061810 32a08138 system%s
+D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200228061810 54135002 system.exception_table%s
+D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
+D s-parame.ads		20200228061810 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
+D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [hashing standard 9 9 none]
+G r i none [main standard 6 11 none] [d_graph standard 5 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 20|1r6 1r29 2r6 2r29 3r6 3r29 4r6 22r10 25r11
 X 2 a-contai.ads
-16K13*Containers 24e19 20|3w10 3r33 22r14
+16K13*Containers 28e19 20|3w10 3r33 22r14
 19M9*Hash_Type 20|22r25 25r35
 X 4 a-flteio.ads
 20K13*Float_Text_IO[11|46] 20|2w10 2r33
@@ -93,16 +96,22 @@ X 10 a-textio.ads
 66n23*In_File{66E9} 20|54r21
 114U14*Open 20|54s7
 129U14*Close 20|72s7
-264U14*New_Line 20|68s50 85s4 91s4
+264U14*New_Line 20|68s50 98s4 104s4
 312V13*End_Of_File{boolean} 20|55s17
 378U14*Get 20|57s10 62s13
 465U14*Put 20|68s13
-508U14*Put_Line 20|86s4 92s4
+508U14*Put_Line 20|99s4 105s4
 X 11 a-tiflio.ads
 52U14*Get 20|65s10[4|20]
 82U14*Put 20|68s30[4|20]
 X 13 d_graph.ads
-5k9*d_graph 39e12 20|5w20
+3i4 size_vertices{positive} 20|78r45
+5k9*d_graph 43e12 20|5w20 78r36
+8A9 graph(32P9[20|78]) 20|81r11[78] 83r31[78]
+14U14 empty 20|86s7[78]
+15U14 put_edge 20|87s7[78] 88s7[78] 89s7[78] 90s7[78] 91s7[78]
+31R9 cell
+32P9 pcell(31R9[20|78])
 X 16 hashing.ads
 3+9 key 20|39r7
 4+9 item 20|39r25
@@ -114,7 +123,7 @@ X 16 hashing.ads
 19U14 cvacio 20|53s7[38]
 20U14 poner 20|70s10[38]
 X 20 main.adb
-6U11*Main 6b11 96l5 96t9
+6U11*Main 6b11 109l5 109t9
 9i4 Length{positive} 10r38
 10A12 Municipio{string}<integer> 13r38 21r25 33r30 39r14 48r13
 13U14 Llena_Municipio 13b14 13<31 13>49 18l8 18t23 66s10
@@ -131,9 +140,9 @@ X 20 main.adb
 33a19 x1{10A12} 35r14
 33a23 x2{10A12} 35r17
 38K12 municipios_hashing[16|9] 40r8 43r7
-42a4 datos{string} 87r18
+42a4 datos{string} 100r18
 43r4 s{16|11R9[38]} 53m14 70m16 70r16
-45U14 Obtener_Datos 45b14 45>29 45>43 45>65 73l8 73t21 87s4
+45U14 Obtener_Datos 45b14 45>29 45>43 45>65 73l8 73t21 100s4
 45a29 file{string} 54r30
 45e43 separator{character} 58r29 63r32
 45b65 mostrarDatos{boolean} 67r13
@@ -143,4 +152,9 @@ X 20 main.adb
 49f7 area{float} 65m23 68r34 70r25
 50i7 idx{integer} 56m10 60r18 61m13 61r19 66r32
 51p7 fichero{10|64P9} 54m12 54r12 55r29 57r14 62r17 65r14 72m13 72r13
+77i4 prueba{integer} 78r62
+78K12 municipios_graph[13|5] 79r8
+81a4 grafo{13|8A9[78]} 106m14
+83U14 Semana_3 83b14 83<24 92l8 92t16 106s4
+83a24 g{13|8A9[78]} 86m13 87m16 88m16 89m16 90m16 91m16
 

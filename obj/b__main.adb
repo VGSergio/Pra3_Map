@@ -8,6 +8,7 @@ with Ada.Exceptions;
 package body ada_main is
 
    E066 : Short_Integer; pragma Import (Ada, E066, "system__os_lib_E");
+   E014 : Short_Integer; pragma Import (Ada, E014, "ada__exceptions_E");
    E010 : Short_Integer; pragma Import (Ada, E010, "system__soft_links_E");
    E008 : Short_Integer; pragma Import (Ada, E008, "system__exception_table_E");
    E005 : Short_Integer; pragma Import (Ada, E005, "ada__containers_E");
@@ -29,8 +30,9 @@ package body ada_main is
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "graph_exceptions_E");
+   E141 : Short_Integer; pragma Import (Ada, E141, "hashing_E");
+   E139 : Short_Integer; pragma Import (Ada, E139, "p_priority_queue_E");
    E136 : Short_Integer; pragma Import (Ada, E136, "d_graph_E");
-   E139 : Short_Integer; pragma Import (Ada, E139, "hashing_E");
 
    Sec_Default_Sized_Stacks : array (1 .. 1) of aliased System.Secondary_Stack.SS_Stack (System.Parameters.Runtime_Default_Sec_Stack_Size);
 
@@ -65,7 +67,7 @@ package body ada_main is
 
    procedure adafinal is
       procedure s_stalib_adafinal;
-      pragma Import (C, s_stalib_adafinal, "system__standard_library__adafinal");
+      pragma Import (Ada, s_stalib_adafinal, "system__standard_library__adafinal");
 
       procedure Runtime_Finalize;
       pragma Import (C, Runtime_Finalize, "__gnat_runtime_finalize");
@@ -80,6 +82,7 @@ package body ada_main is
    end adafinal;
 
    type No_Param_Proc is access procedure;
+   pragma Favor_Top_Level (No_Param_Proc);
 
    procedure adainit is
       Main_Priority : Integer;
@@ -112,8 +115,6 @@ package body ada_main is
       pragma Import (C, Default_Stack_Size, "__gl_default_stack_size");
       Default_Secondary_Stack_Size : System.Parameters.Size_Type;
       pragma Import (C, Default_Secondary_Stack_Size, "__gnat_default_ss_size");
-      Leap_Seconds_Support : Integer;
-      pragma Import (C, Leap_Seconds_Support, "__gl_leap_seconds_support");
       Bind_Env_Addr : System.Address;
       pragma Import (C, Bind_Env_Addr, "__gl_bind_env_addr");
 
@@ -147,7 +148,6 @@ package body ada_main is
       Unreserve_All_Interrupts := 0;
       Detect_Blocking := 0;
       Default_Stack_Size := -1;
-      Leap_Seconds_Support := 0;
 
       ada_main'Elab_Body;
       Default_Secondary_Stack_Size := System.Parameters.Runtime_Default_Sec_Stack_Size;
@@ -158,6 +158,7 @@ package body ada_main is
 
       Finalize_Library_Objects := finalize_library'access;
 
+      Ada.Exceptions'Elab_Spec;
       System.Soft_Links'Elab_Spec;
       System.Exception_Table'Elab_Body;
       E008 := E008 + 1;
@@ -186,6 +187,7 @@ package body ada_main is
       E010 := E010 + 1;
       System.Traceback.Symbolic'Elab_Body;
       E032 := E032 + 1;
+      E014 := E014 + 1;
       Ada.Tags'Elab_Spec;
       Ada.Tags'Elab_Body;
       E103 := E103 + 1;
@@ -204,8 +206,9 @@ package body ada_main is
       E099 := E099 + 1;
       graph_exceptions'elab_spec;
       E137 := E137 + 1;
-      E136 := E136 + 1;
+      E141 := E141 + 1;
       E139 := E139 + 1;
+      E136 := E136 + 1;
    end adainit;
 
    procedure Ada_Main_Program;
@@ -228,8 +231,10 @@ package body ada_main is
       pragma Volatile (Ensure_Reference);
 
    begin
-      gnat_argc := argc;
-      gnat_argv := argv;
+      if gnat_argc = 0 then
+         gnat_argc := argc;
+         gnat_argv := argv;
+      end if;
       gnat_envp := envp;
 
       Initialize (SEH'Address);
@@ -241,13 +246,14 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\graph_exceptions.o
-   --   C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\d_graph.o
-   --   C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\hashing.o
-   --   C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\main.o
-   --   -LC:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\
-   --   -LC:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\
-   --   -LC:/gnat/2019/lib/gcc/x86_64-pc-mingw32/8.3.1/adalib/
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\graph_exceptions.o
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\hashing.o
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\p_priority_queue.o
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\d_graph.o
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\main.o
+   --   -LC:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\
+   --   -LC:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\
+   --   -LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
    --   -static
    --   -lgnat
    --   -Wl,--stack=0x2000000

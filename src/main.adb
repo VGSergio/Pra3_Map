@@ -103,7 +103,7 @@ begin
    --Tercera semana-------------------------
    New_Line;
    Put_Line("Tercera Semana");
-
+   Semana_3 (grafo);
    -----------------------------------------
 
 end Main;

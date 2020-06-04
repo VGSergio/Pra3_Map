@@ -18,13 +18,13 @@ package body d_graph is
       p:= g(x);
       -- x -> y
       while p/=null and not found loop -- While not end of list
-         if p.x=y then
+         if p.x=y then -- There is already a edge between them
             found:= true;
          else
-            p:= p.next;
+            p:= p.next; -- Next edge
          end if;
       end loop;
-      if not found then
+      if not found then -- If there was a edge between them
          --p.x:=y; p.d:= d; p.next:=null;
          null;
       else
@@ -34,13 +34,13 @@ package body d_graph is
       p:= g(y);
       -- y -> x
       while p/=null and not found loop -- While not end of list
-         if p.x=x then
+         if p.x=x then -- There is already a edge between them
             found:= true;
          else
-            p:= p.next;
+            p:= p.next; -- Next edge
          end if;
       end loop;
-      if not found then
+      if not found then -- If there was a edge between them
          --p.x:=x; p.d:= d; p.next:=null;
          null;
       else
