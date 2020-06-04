@@ -12,29 +12,37 @@ package body d_graph is
    
    -- Puts an edge connecting two vertices given a distance
    procedure put_edge (g: in out graph; x,y: in vertex; d: in distance) is 
-      p, p1: pcell;
+      p: pcell;
       found: Boolean := False;
    begin
-      p:= new cell;
-      p1:= new cell;
-      p.all:=(y, d, null);
-      while not found and g(x).next/=null loop
-         p1:= g(x).next;
-         found:= p1.x=y;
+      p:= g(x);
+      -- x -> y
+      while p/=null and not found loop -- While not end of list
+         if p.x=y then
+            found:= true;
+         else
+            p:= p.next;
+         end if;
       end loop;
       if not found then
-         p1.next:= p;
+         --p.x:=y; p.d:= d; p.next:=null;
+         null;
       else
          raise already_exists;
       end if;
-      p.x:=(x);
-      found:= False;
-      while not found and g(y).next/=null loop
-         p1:= g(y).next;
-         found:= p1.x=x;
+      found:= false;
+      p:= g(y);
+      -- y -> x
+      while p/=null and not found loop -- While not end of list
+         if p.x=y then
+            found:= true;
+         else
+            p:= p.next;
+         end if;
       end loop;
       if not found then
-         p1.next:= p;
+         --p.x:=x; p.d:= d; p.next:=null;
+         null;
       else
          raise already_exists;
       end if;

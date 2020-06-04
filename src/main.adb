@@ -74,8 +74,22 @@ procedure Main is
    -----------------------------------------
 
    --Tercera semana-------------------------
+   prueba: Integer := 4;
+   package municipios_graph is new d_graph (size_vertices => prueba);
+   use municipios_graph;
 
+   grafo: graph;
 
+   procedure Semana_3 (g: out graph) is
+      --min: distance;
+   begin
+      empty(g);
+      put_edge(g, 1, 2, 3.0);
+      put_edge(g, 1, 3, 1.0);
+      put_edge(g, 1, 4, 5.0);
+      put_edge(g, 2, 4, 1.0);
+      put_edge(g, 3, 2, 1.0);
+   end Semana_3;
    -----------------------------------------
 
 begin
