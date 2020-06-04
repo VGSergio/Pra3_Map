@@ -4,7 +4,7 @@ package body d_graph is
    procedure empty (g: out graph) is
    begin
       for I in vertex'Range loop
-         g(I):=null; -- Set each vertex's edge to null
+         g(I):=null; -- Set each cell in the array to null
       end loop;
    end empty;
    
@@ -78,15 +78,20 @@ package body d_graph is
    end remove_edge;
    
    function get_distance (g: in graph; x,y : in vertex) return distance is
+      aux: pcell;
+      d: distance := infty;   -- If it stays as infinity, edge does not exist
    begin
       if g(x)=null or g(y)=null then raise does_not_exist; end if;
-      --while not g(x).next=null loop
-      --   if g(x).x=y then 
-      --      return g(x).d; 
-      --   end if;
-      --end loop;
-      --raise does_not_exist;
-      return 0.0;
+      aux:= g(x);
+      while aux /= null loop  -- We iterate through the list of edges
+         if aux.x /= y then
+            aux:= aux.next;
+         else
+            d:= aux.d;
+         end if;
+      end loop;
+      if d = infty then raise does_not_exist; end if;
+      return d;
    end get_distance;   
    
 
