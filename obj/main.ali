@@ -1,4 +1,4 @@
-V "GNAT Lib v2020"
+V "GNAT Lib v2019"
 M P W=b
 A -gnatA
 A -mtune=generic
@@ -20,6 +20,7 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
+RV SPARK_05
 
 U main%b		main.adb		23c1aa4d NE OO SU
 W ada%s			ada.ads			ada.ali
@@ -38,47 +39,47 @@ Z system.concat_2%s	s-conca2.adb		s-conca2.ali
 Z system.exception_table%s  s-exctab.adb	s-exctab.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 
-D ada.ads		20200228061810 76789da1 ada%s
-D a-contai.ads		20200228061810 61e5e089 ada.containers%s
-D a-except.ads		20200228061810 a7106115 ada.exceptions%s
-D a-flteio.ads		20200228061810 e18a47a0 ada.float_text_io%s
-D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
-D a-string.ads		20200228061810 90ac6797 ada.strings%s
-D a-strhas.ads		20200228061810 c71c2a52 ada.strings.hash%s
-D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
-D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
-D a-tiflio.ads		20200228061810 bf196650 ada.text_io.float_io%s
-D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
-D d_graph.ads		20200603222550 ac475cd5 d_graph%s
-D d_graph.adb		20200603222902 662c5b87 d_graph%b
-D graph_exceptions.ads	20200603181746 458197ef graph_exceptions%s
-D hashing.ads		20200603181746 dff3156b hashing%s
-D hashing.adb		20200603181746 23100564 hashing%b
-D interfac.ads		20200228061810 5ab55268 interfaces%s
-D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
-D main.adb		20200603222536 b9f2bbe5 main%b
-D system.ads		20200228061810 32a08138 system%s
-D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
-D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
-D s-exctab.ads		20200228061810 54135002 system.exception_table%s
-D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
-D s-parame.ads		20200228061810 4752c4cb system.parameters%s
-D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
-D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
-D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
-D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
-D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
-D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
-D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
+D ada.ads		20190518041256 76789da1 ada%s
+D a-contai.ads		20190518041256 61e5e089 ada.containers%s
+D a-except.ads		20190518041256 291912d5 ada.exceptions%s
+D a-flteio.ads		20190518041256 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
+D a-string.ads		20190518041256 90ac6797 ada.strings%s
+D a-strhas.ads		20190518041258 c71c2a52 ada.strings.hash%s
+D a-tags.ads		20190518041258 491b781d ada.tags%s
+D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
+D a-tiflio.ads		20190518041256 bf196650 ada.text_io.float_io%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200604102604 ac475cd5 d_graph%s
+D d_graph.adb		20200604114908 2ff62e5f d_graph%b
+D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
+D hashing.ads		20200603164250 dff3156b hashing%s
+D hashing.adb		20200603164250 23100564 hashing%b
+D interfac.ads		20190518041256 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
+D main.adb		20200604094040 b9f2bbe5 main%b
+D system.ads		20190518041258 32a08138 system%s
+D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
+D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
+D s-parame.ads		20190518041258 48ec542b system.parameters%s
+D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [hashing standard 9 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 20|1r6 1r29 2r6 2r29 3r6 3r29 4r6 22r10 25r11
 X 2 a-contai.ads
-16K13*Containers 28e19 20|3w10 3r33 22r14
+16K13*Containers 24e19 20|3w10 3r33 22r14
 19M9*Hash_Type 20|22r25 25r35
 X 4 a-flteio.ads
 20K13*Float_Text_IO[11|46] 20|2w10 2r33

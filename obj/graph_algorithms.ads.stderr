@@ -1,0 +1,2 @@
+graph_algorithms.ads:5:30: "vertex" is undefined (more references follow)
+graph_algorithms.ads:5:41: "distance" is undefined

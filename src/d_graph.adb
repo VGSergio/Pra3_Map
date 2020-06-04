@@ -1,4 +1,5 @@
 with graph_exceptions; use graph_exceptions;
+with p_priority_queue;
 package body d_graph is
 
    -- Creates empty graph
@@ -143,5 +144,28 @@ package body d_graph is
       y:=p.x;
       d:=p.d;
    end get;
+   
+--     -- Calculates the shortest path from v0 to v in a given graph.
+--     procedure shortest_path(g: in graph; v0, v: in vertex; p: out path) is
+--        
+--        -- VD is formed by a vertex and its shortest distance to v0 found.
+--        -- It will be used to store each of the vertices which have not yet been  
+--        -- visited in the heap.
+--        type VD is record
+--           v: vertex;
+--           d: distance;
+--        end record;
+--        
+--        function lesser(x1,x2: in SD) 
+--        
+--        package heap is new p_priority_queue(size => ,
+--                                             item => ,
+--                                             "<"  => ,
+--                                             ">"  => ); use heap;
+--        
+--        
+--     begin
+--        null;
+--     end shortest_path;
    
 end d_graph;

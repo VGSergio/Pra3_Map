@@ -1,2 +1,0 @@
-d_graph.adb:6:11: expected type "graph" defined at d_graph.ads:34
-d_graph.adb:6:11: found type access to "graph" defined at line 6

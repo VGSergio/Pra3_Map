@@ -1,0 +1,64 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U p_priority_queue%b	p_priority_queue.adb	9f155fdb NE OO PK GE IL
+
+U p_priority_queue%s	p_priority_queue.ads	281ad6ca BN EE NE OO PK GE IL
+
+D p_priority_queue.ads	20200604121102 281ad6ca p_priority_queue%s
+D p_priority_queue.adb	20200604121118 b70f8911 p_priority_queue%b
+D system.ads		20190518041258 32a08138 system%s
+G a e
+G c Z s b [p_priority_queue standard 6 9 none]
+X 1 p_priority_queue.ads
+2i4 size{positive} 22r32 2|14r12
+3+9 item 4r32 5r32 14r50 16r52 22r41 2|8r50 27r10 44r52
+4V19 "<"{boolean} 4>22 4>25 2|32s31 35s33 37s34
+4*22 x1{3+9}
+4*25 x2{3+9}
+5V19 ">"{boolean} 5>22 5>25 2|16s34
+5*22 x1{3+9}
+5*25 x2{3+9}
+6k9*p_priority_queue 2z4 3z9 4z19 5z19 22E9 28l5 28e21 2|1b14 58l5 58t21
+8R9*priority_queue 13r27 14r28 15r37 16r29 17r28 23c9 26e14 2|3r27 8r28 22r37
+. 44r29 52r28
+10X4*space_overflow 2|14r28
+11X4*bad_use 2|29r25 48r25
+13U14*empty 13<20 2|3b14 6l8 6t13
+13r20 q{8R9} 2|3b20 4m26 4r26
+14U14*put 14=18 14>44 2|8b14 20l8 20t11
+14r18 q{8R9} 2|8b18 9m28 9r28 10m26 10r26
+14*44 x{3+9} 2|8b44 16r35 19r13
+15U14*delete_least 15=27 2|22b14 42l8 42t20
+15r27 q{8R9} 2|22b27 23m28 23r28 24m26 24r26
+16V13*get_least{3+9} 16>23 2|44b13 50l8 50t17
+16r23 q{8R9} 2|44b23 45r28 46r26
+17V13*is_empty{boolean} 17>22 2|52b13 56l8 56t16
+17r22 q{8R9} 2|52b22 53r26
+22A9 mem_space(3+9)<integer> 24r10 2|9r10 23r10 45r10
+24a7 a{22A9} 2|9m30 23m30 45m30
+25i7 n{natural} 2|4m28 10m28 24m28 46m28 53m28
+X 2 p_priority_queue.adb
+4i7 n{natural} 5r10
+9a7 a{1|22A9} 16r29 17r10 17r16 19r7
+10i7 n{natural} 14r10 15r7 15r11 15r19 15r26
+11i7 i{natural} 15m16 17r12 17m23 17r34 19r9
+12i7 pi{natural} 15m22 16r13 16r31 17r18 17r26 17m30
+23a7 a{1|22A9} 30r11 32r24 32r32 35r28 36r10 36r16 37r27 37r35 41r7
+24i7 n{natural} 29r10 30r13 30r17 30r20 32r13 35r17 37r16
+25i7 i{natural} 31m7 31r17 36r12 36m23 36r34 41r9
+26i7 ci{natural} 31m13 32r10 32r26 32r34 33m10 33r14 35r13 35r30 36r18 36r26
+. 36m30 37r13 37r29 37r37 38m13 38r17
+27*7 x{1|3+9} 30m7 35r34 41r13
+45a7 a{1|22A9} 49r14
+46i7 n{natural} 48r10
+53i7 n{natural} 55r14
+
