@@ -1,6 +1,7 @@
 with graph_exceptions; use graph_exceptions;
 package body d_graph is
 
+   -- Creates empty graph
    procedure empty (g: out graph) is
    begin
       for I in vertex'Range loop
@@ -8,6 +9,7 @@ package body d_graph is
       end loop;
    end empty;
    
+   -- Puts an edge connecting two vertices given a distance
    procedure put_edge (g: in out graph; x,y: in vertex; d: in distance) is 
       p, p1: pcell;
       found: Boolean := False;
@@ -37,6 +39,7 @@ package body d_graph is
       end if;
    end put_edge;
    
+   -- Removes an edge connecting two vertices.
    procedure remove_edge (g: in out graph; x,y: in vertex) is
       curr, prev: pcell; -- Current and previous cells to iterate through lists
    begin
@@ -77,6 +80,7 @@ package body d_graph is
       end loop;
    end remove_edge;
    
+   -- Gets the distance between two vertices
    function get_distance (g: in graph; x,y : in vertex) return distance is
       aux: pcell;
       d: distance := infty;   -- If it stays as infinity, edge does not exist
@@ -94,30 +98,50 @@ package body d_graph is
       return d;
    end get_distance;   
    
-
-   procedure first (g: in  graph; x: in vertex; it: out iterator) is
+   -- Returns first not null vertex connected to a given vertex.
+   procedure first (g: in graph; x: in vertex; it: out iterator) is
+      p: pcell renames it.p;
    begin
-      null;
+      if g(x)=null then raise bad_use; end if;
+      p:= g(x).next;
    end first;
    
+   -- Returns the next not null vertex on the iterator.
    procedure next (g: in graph; it: in out iterator) is
+      p: pcell renames it.p;
    begin
-      null;
+      if p=null then raise bad_use; end if;
+      p:= p.next;
    end next;
    
+   -- Returns whether the iterator is in a valid location of the edge list.
    function is_valid(it: in iterator) return boolean is
+      p: pcell renames it.p;
    begin
-      return True;
+      if p=null then
+         return false;
+      else
+         return true;
+      end if;
    end is_valid;
    
-   procedure get (g: in graph; it: in iterator;  y: out vertex) is 
+   -- Gets the vertex that is connected through the edge in which the iterator
+   -- is located.
+   procedure get (g: in graph; it: in iterator; y: out vertex) is
+      p: pcell renames it.p;
    begin
-      null;
+      if p=null then raise bad_use; end if;
+      y:=p.x;
    end get;
 
+   -- Gets the vertex that is connected through the edge in which the iterator
+   -- is located and the edge's distance.
    procedure get (g: in graph; it: in iterator;  y: out vertex;  d: out distance) is 
+      p: pcell renames it.p;
    begin
-      null;
+      if p=null then raise bad_use; end if;
+      y:=p.x;
+      d:=p.d;
    end get;
    
 end d_graph;
