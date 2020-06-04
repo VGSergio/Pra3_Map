@@ -2,8 +2,11 @@ with graph_exceptions; use graph_exceptions;
 package body d_graph is
 
    procedure empty (g: out graph) is
+      type pgraph is access graph;
+      g1: pgraph;
    begin
-      g:= new graph;
+      g1:= new graph;
+      g:= g1.all;
       for I in vertex'Range loop
          g(I).all:=(I, infty, null);
       end loop;
@@ -39,16 +42,43 @@ package body d_graph is
    end put_edge;
    
    procedure remove_edge (g: in out graph; x,y: in vertex) is
-      
+      curr, prev: pcell; -- Current and previous cells to iterate through lists
    begin
-      --if g(x)=null or g(y)=null then raise does_not_exist; end if;
-      --while not g(x).next=null loop
-      --   if g(x).x=y then g(x).x=null; end if;
-      --end loop;
-      --while not g(Y).next=null loop
-      --   if g(y).x=x then g(y).x=null; end if;
-      --end loop;
-      null;
+      if g(x)=null or g(y)=null then raise does_not_exist; end if;
+      curr:= g(x);
+      prev:= null;
+      -- x -> y
+      while curr.next/=null loop -- While not end of list
+         if curr.x/=y then          -- If vertex was not found
+            prev:= curr;               -- We iterate through the list.
+            curr:= curr.next;
+         else                       -- If vertex was found
+            curr.d:= infty;         -- Distance is set to infinity for good
+                                    -- measure.
+            if prev = null then        -- if it was the first one, the array g
+               g(x) := curr.next;      -- is updated directly.
+            else
+               prev.next := curr.next; -- Otherwise, the list is updated.
+            end if;
+         end if;
+      end loop;
+      -- y -> x
+      curr:= g(y);
+      prev:= null;
+      while curr.next/=null loop -- While not end of list
+         if curr.x/=y then          -- If vertex was not found
+            prev:= curr;               -- We iterate through the list.
+            curr:= curr.next;
+         else                       -- If vertex was found
+            curr.d:= infty;         -- Distance is set to infinity for good
+                                    -- measure.
+            if prev = null then        -- if it was the first one, the array g
+               g(y) := curr.next;      -- is updated directly.
+            else
+               prev.next := curr.next; -- Otherwise, the list is updated.
+            end if;
+         end if;
+      end loop;
    end remove_edge;
    
    function get_distance (g: in graph; x,y : in vertex) return distance is
