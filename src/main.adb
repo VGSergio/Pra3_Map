@@ -98,9 +98,10 @@ procedure Main is
 
       -- Print the vertices connected to 4.
       first(g, 4, it);
+      Put_Line("Vertices vecinos del vértice 4");
       while is_valid(it) loop
          get(g, it, v, d);
-         Put_Line("4 ->" & v'Image & ": " & d'Image & "km");
+         Put("· Vértice" & v'Image & " (a "); put(Float(d), 0, 1, 0); Put(" km)"); New_Line;
          next(g, it);
       end loop;
 
