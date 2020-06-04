@@ -2,13 +2,9 @@ with graph_exceptions; use graph_exceptions;
 package body d_graph is
 
    procedure empty (g: out graph) is
-      type pgraph is access graph;
-      g1: pgraph;
    begin
-      g1:= new graph;
-      g:= g1.all;
       for I in vertex'Range loop
-         g(I).all:=(I, infty, null);
+         g(I):=null; -- Set each vertex's edge to null
       end loop;
    end empty;
    
@@ -83,7 +79,7 @@ package body d_graph is
    
    function get_distance (g: in graph; x,y : in vertex) return distance is
    begin
-      --if g(x)=null or g(y)=null then raise does_not_exist; end if;
+      if g(x)=null or g(y)=null then raise does_not_exist; end if;
       --while not g(x).next=null loop
       --   if g(x).x=y then 
       --      return g(x).d; 
