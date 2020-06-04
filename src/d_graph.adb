@@ -56,12 +56,13 @@ package body d_graph is
             end if;
          end if;
       end loop;
+      if not found then raise does_not_exist; end if;
       -- y -> x
       curr:= g(y);
       prev:= null;
       found:= false;
       while curr/=null and not found loop -- While not end of list and not found
-         if curr.x/=y then          -- If vertex was not found
+         if curr.x/=x then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
          else                       -- If vertex was found
@@ -75,6 +76,7 @@ package body d_graph is
             end if;
          end if;
       end loop;
+      if not found then raise does_not_exist; end if;
    end remove_edge;
    
    -- Gets the distance between two vertices

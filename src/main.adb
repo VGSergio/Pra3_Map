@@ -93,6 +93,7 @@ procedure Main is
       put_edge(g, 1, 4, 5.0);
       put_edge(g, 2, 4, 1.0);
       put_edge(g, 3, 2, 1.0);
+      remove_edge(g, 2, 4);
 
       -- TO-DO: Shortest path from 4 to 1
 
