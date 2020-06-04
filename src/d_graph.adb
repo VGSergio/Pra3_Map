@@ -35,16 +35,18 @@ package body d_graph is
    -- Removes an edge connecting two vertices.
    procedure remove_edge (g: in out graph; x,y: in vertex) is
       curr, prev: pcell; -- Current and previous cells to iterate through lists
+      found: boolean:= false;
    begin
       if g(x)=null or g(y)=null then raise does_not_exist; end if;
       curr:= g(x);
       prev:= null;
       -- x -> y
-      while curr/=null loop -- While not end of list
+      while curr/=null and not found loop -- While not end of list
          if curr.x/=y then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
          else                       -- If vertex was found
+            found:= true;
             curr.d:= infty;         -- Distance is set to infinity for good
                                     -- measure.
             if prev = null then        -- if it was the first one, the array g
@@ -57,11 +59,13 @@ package body d_graph is
       -- y -> x
       curr:= g(y);
       prev:= null;
-      while curr/=null loop -- While not end of list
+      found:= false;
+      while curr/=null and not found loop -- While not end of list
          if curr.x/=y then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
          else                       -- If vertex was found
+            found:= true;
             curr.d:= infty;         -- Distance is set to infinity for good
                                     -- measure.
             if prev = null then        -- if it was the first one, the array g
@@ -85,6 +89,7 @@ package body d_graph is
             aux:= aux.next;
          else
             d:= aux.d;
+            aux:=null; -- Set aux to null so we can exit the loop.
          end if;
       end loop;
       if d = infty then raise does_not_exist; end if;
