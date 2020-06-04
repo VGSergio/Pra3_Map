@@ -60,7 +60,7 @@ package body d_graph is
       curr:= g(y);
       prev:= null;
       found:= false;
-      while curr/=null and not found loop -- While not end of list
+      while curr/=null and not found loop -- While not end of list and not found
          if curr.x/=y then          -- If vertex was not found
             prev:= curr;               -- We iterate through the list.
             curr:= curr.next;
@@ -89,7 +89,7 @@ package body d_graph is
             aux:= aux.next;
          else
             d:= aux.d;
-            aux:=null; -- Set aux to null so we can exit the loop.
+            aux:=null;        -- Set aux to null so we can exit the loop.
          end if;
       end loop;
       if d = infty then raise does_not_exist; end if;
