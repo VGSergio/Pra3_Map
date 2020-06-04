@@ -8,15 +8,18 @@ package d_mapa is
    subtype distance is float;
    type t_ciutat is ...;
    
+   city_already_exists: exception;
+   city_doesnt_exists: exception;
+   road_doesnt_exists: exception;
+   
    procedure mapa_buit(m: out mapa);
    procedure put_ciutat(m: in out mapa; ciutat: in t_ciutat);
    procedure delete_ciutat(m: in out mapa; ciutat: in t_ciutat);
-   procedure put_carretera(m: in out mapa; ciutat1: in t_ciutat;
-                           ciutat2: in t_ciutat; km: in distance);
-   procedure delete_carretera(m: in out mapa; ciutat1: int_ciutat;
-                              ciutat2: in t_ciutat);
-   procedure distancia_min(m: in mapa; ciutat1: in t_ciutat;
-                            ciutat2: in t_ciutat; km: out distance);
+   procedure put_carretera(m: in out mapa; ciutat1, ciutat2: in t_ciutat;
+                           km: in distance);
+   procedure delete_carretera(m: in out mapa; ciutat1, ciutat2: int_ciutat);
+   procedure distancia_min(m: in mapa; ciutat1, ciutat2: in t_ciutat;
+                           km: out distance);
    procedure imprimir_veinats(m: in mapa; ciutat: in t_ciutat);
    
 private

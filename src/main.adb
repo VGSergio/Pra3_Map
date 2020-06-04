@@ -2,7 +2,7 @@ with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
-with hashing; with d_graph;
+with hashing; with d_graph; with d_mapa;
 procedure Main is
 
    --Segunda semana-------------------------
@@ -109,6 +109,17 @@ procedure Main is
    end Semana_3;
    -----------------------------------------
 
+   --Cuarta semana--------------------------
+   municipios: String := "municipis_mallorca.txt";
+   distancias: String := "distancies_mallorca.txt";
+
+   procedure Semana_4 (s1,s2: String) is
+      fichero: File_Type;
+   begin
+      null;
+   end Semana_4;
+   -----------------------------------------
+
 begin
 
    --Segunda semana-------------------------
@@ -121,6 +132,12 @@ begin
    New_Line;
    Put_Line("Tercera Semana");
    Semana_3 (grafo);
+   -----------------------------------------
+
+   --Cuarta semana--------------------------
+   New_Line;
+   Put_Line("Cuarta Semana");
+   Semana_4 (municipios, distancias);
    -----------------------------------------
 
 end Main;
