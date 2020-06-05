@@ -119,7 +119,14 @@ procedure Main is
    ciudad1, ciudad2: t_ciutat;
    distancia: mallorca_d_mapa.distance;
 
-   procedure Semana_4 (s1,s2: String; separator: Character) is
+   procedure rellenar_nombre_ciudad (ciudad: in out t_ciutat) is
+   begin
+      for I in ciudad.longitud+1..ciudad1.nombre'Last loop
+         ciudad.nombre(I) := ' ';
+      end loop;
+   end rellenar_nombre_ciudad;
+
+   procedure Semana_4 (s1,s2: String; separator: Character; comentarios: Boolean) is
       fichero: File_Type;
       ciudad1, ciudad2: t_ciutat;
       idx1, idx2: Integer;
@@ -138,13 +145,16 @@ procedure Main is
          ciudad1.nombre(1..length) := aux(1..length);
          ciudad1.longitud:=length;
          --  Rellenamos el nombre
-         for I in ciudad1.longitud+1..ciudad1.nombre'Last loop
-            ciudad1.nombre(I) := ' ';
-         end loop;
-         Put_Line("Introducimos la ciudad " & ciudad1.nombre(1..ciudad1.longitud));
+         rellenar_nombre_ciudad(ciudad1);
 
+         --  Añadimos la ciudad
          put_ciutat(m      => mallorca,
-                    ciutat => ciudad1);  -- Los cargamos en el mapa
+                    ciutat => ciudad1);
+
+         if comentarios then
+            Put_Line("Introducimos la ciudad " & ciudad1.nombre(1..ciudad1.longitud));
+         end if;
+
       end loop;
       Close(fichero);
 
@@ -164,9 +174,7 @@ procedure Main is
          ciudad1.nombre(1..idx1-1) := aux(1..idx1-1);
          ciudad1.longitud := idx1-1;
          --  Rellenamos el nombre
-         for I in ciudad1.longitud+1..ciudad1.nombre'Last loop
-            ciudad1.nombre(I) := ' ';
-         end loop;
+         rellenar_nombre_ciudad(ciudad1);
 
          --  Obtenemos la segunda ciudad
          idx2:= idx1+1;
@@ -177,22 +185,23 @@ procedure Main is
          ciudad2.nombre(1..idx2-idx1) := aux(idx1+1..idx2);
          ciudad2.longitud := idx2-idx1-1;
          --  Rellenamos el nombre
-         for I in ciudad2.longitud+1..ciudad2.nombre'Last loop
-            ciudad2.nombre(I) := ' ';
-         end loop;
+         rellenar_nombre_ciudad(ciudad2);
 
          --  Obtenemos la distancia de la carretera
          distancia:=Float'Value(aux(idx2+1..length));
 
          --  Añadimos la carretera
-         Put_Line("Unimos las ciudades " & ciudad1.nombre
-                  & " y " & ciudad2.nombre
-                  & " con una carretera de longitud" & distancia'Image);
-
          put_carretera(m       => mallorca,
                        ciutat1 => ciudad1,
                        ciutat2 => ciudad2,
                        km      => distancia);
+
+         if comentarios then
+            Put("Unimos las ciudades " & ciudad1.nombre(1..ciudad1.longitud)
+                & " y " & ciudad2.nombre(1..ciudad2.longitud)
+                & " con una carretera de longitud ");
+            Put(Float(distancia), 0, 2, 0); Put("km"); New_Line;
+         end if;
 
       end loop;
       Close(fichero);
@@ -219,8 +228,7 @@ begin
    Put_Line("Cuarta Semana");
 
    --  Carga de datos
-
-   Semana_4 (municipios, distancias, ';');
+   Semana_4 (municipios, distancias, ';', true);
 
    --  Distancia minima
    New_Line;
