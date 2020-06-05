@@ -71,7 +71,7 @@ package body d_mapa is
       put_edge(carreteras, v1, v2, mapa_graph.distance(km));  --  Ponemos la carretera entre ambas
 
    exception
-      when no_existe => raise city_doesnt_exists;
+      when no_existee => raise city_doesnt_exists;
       when already_exists => raise road_already_exists;
    end put_carretera;
    

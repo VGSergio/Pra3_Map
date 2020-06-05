@@ -22,7 +22,7 @@ procedure Main is
    end Hash;
 
    --Mallorca tiene 67 municipios, el siguiente número primo mayor o igual es 67
-   primo: Positive := 67;
+   cant_municipios: Positive := 67;
 
    function igual(x1, x2: in Municipio) return Boolean is
    begin
@@ -30,7 +30,7 @@ procedure Main is
    end igual;
 
    package municipios_hashing is new hashing
-     (key => Municipio, item => Float, hash => Hash, size => primo, "=" => igual);
+     (key => Municipio, item => Float, hash => Hash, size => cant_municipios, "=" => igual);
    use municipios_hashing;
 
    datos: String := "municipis_superficie_mallorca.txt";
@@ -111,13 +111,70 @@ procedure Main is
    distancias: String := "distancies_mallorca.txt";
 
    --  Mallorca tiene 67 municipios
-   package mallorca_d_mapa is new d_mapa (num_ciutats => 67);
+   --  cant_municipios: Positive := 67;
+   package mallorca_d_mapa is new d_mapa (num_ciutats => cant_municipios);
    use mallorca_d_mapa;
 
-   procedure Semana_4 (s1,s2: String) is
+   mallorca: mapa;
+   ciudad1, ciudad2: t_ciutat;
+   distancia: mallorca_d_mapa.distance;
+
+   procedure Semana_4 (s1,s2: String; separator: Character) is
       fichero: File_Type;
+      ciudad1, ciudad2: t_ciutat;
+      idx1, idx2: Integer;
+      distancia: mallorca_d_mapa.distance;
+
+      aux: String(1..2*nombre_max_length+20);
+      length: Natural;
    begin
-      null;
+      --  Iniciamos el mapa
+      mapa_buit(mallorca);
+
+      --  Leemos los municipios
+      Open(fichero, In_File, s1);
+      while not End_Of_File(fichero) loop
+         Get_Line(fichero, aux, length);  -- Nombre y longitud del mismo
+         ciudad1.nombre(1..length) := aux(1..length);
+         ciudad1.longitud:=length;
+         put_ciutat(mallorca, ciudad1);  -- Los cargamos en el mapa
+      end loop;
+      Close(fichero);
+
+      --  Leemos las carreteras
+      Open(fichero, In_File, s2);
+      while not End_Of_File(fichero) loop
+         Get_Line(fichero, aux, length);  --  Leemos los datos
+         idx1:= 1;
+
+         --  Separamos los datos
+
+         --  Obtenemos la primera ciudad
+         while aux(idx1)/=separator loop
+            idx1:= idx1+1;
+         end loop;
+         -- Guardamos la primera ciudad
+         ciudad1.nombre(1..idx1-1) := aux(1..idx1-1);
+         ciudad1.longitud := idx1-1;
+
+         --  Obtenemos la segunda ciudad
+         idx2:= idx1+1;
+         while aux(idx2)/=separator loop
+            idx2:= idx2+1;
+         end loop;
+         -- Guardamos la segunda ciudad
+         ciudad2.nombre(1..idx2-idx1) := aux(idx1+1..idx2);
+         ciudad2.longitud := idx2-idx1-1;
+
+         --  Obtenemos la distancia de la carretera
+         distancia:=Float'Value(aux(idx2+1..length));
+
+         --  Añadimos la carretera
+         put_carretera(mallorca, ciudad1, ciudad2, distancia);
+
+      end loop;
+      Close(fichero);
+
    end Semana_4;
    -----------------------------------------
 
@@ -138,7 +195,20 @@ begin
    --Cuarta semana--------------------------
    New_Line;
    Put_Line("Cuarta Semana");
-   Semana_4 (municipios, distancias);
+
+   --  Carga de datos
+   Semana_4 (municipios, distancias, ';');
+
+   --  --  Distancia minima
+   --  New_Line;
+   --  ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
+   --  ciudad2:=(nombre => "Sineu                         ", longitud => 5);
+   --  distancia_min(mallorca, ciudad1, ciudad2, distancia);
+   --
+   --  --  Imprimir vecinos
+   --  New_Line;
+   --  ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
+   --  imprimir_veinats(mallorca, ciudad1);
    -----------------------------------------
 
 end Main;
