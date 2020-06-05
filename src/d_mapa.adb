@@ -65,7 +65,7 @@ package body d_mapa is
       carreteras: graph renames m.carreteras;
       v1, v2: vertex;
    begin
-      
+
       consultar(ciudades, ciutat1, v1);  --  Obtenemos el vertex que ocupa la ciudad1
       consultar(ciudades, ciutat2, v2);  --  Obtenemos el vertex que ocupa la ciudad2
       put_edge(carreteras, v1, v2, mapa_graph.distance(km));  --  Ponemos la carretera entre ambas
@@ -105,7 +105,6 @@ package body d_mapa is
       v1, v2: vertex;
       it: iterator;
       
-      nombre, vecino: String(1..nombre_max_length);
 
    begin
       --  Obtenemos el vertex de la ciudad
@@ -113,12 +112,10 @@ package body d_mapa is
       
       --  Obtenemos sus vecinos
       first(carreteras, v1, it);
-      nombre:= ciutat.nombre(1..ciutat.longitud);
-      Put_Line("Vertices vecinos del vértice " & nombre);
+      Put_Line("Vertices vecinos del vértice " & ciutat.nombre(1..ciutat.longitud));
       while is_valid(it) loop
          get(carreteras, it, v2);
-         vecino:= lista_ciudades(v2).nombre(1..lista_ciudades(v2).longitud);
-         Put_Line("· " & vecino);
+         Put_Line("· " & lista_ciudades(v2).nombre(1..lista_ciudades(v2).longitud));
          next(carreteras, it);
       end loop;
       

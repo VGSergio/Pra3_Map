@@ -1,4 +1,4 @@
-V "GNAT Lib v2019"
+V "GNAT Lib v2020"
 M P W=b
 A -gnatA
 A -mtune=generic
@@ -20,9 +20,8 @@ RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
-RV SPARK_05
 
-U main%b		main.adb		31a01af1 NE OO SU
+U main%b		main.adb		c867e792 NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -46,48 +45,48 @@ Z system.img_int%s	s-imgint.adb		s-imgint.ali
 Z system.standard_library%s  s-stalib.adb	s-stalib.ali
 Z system.val_real%s	s-valrea.adb		s-valrea.ali
 
-D ada.ads		20190518041256 76789da1 ada%s
-D a-contai.ads		20190518041256 61e5e089 ada.containers%s
-D a-except.ads		20190518041256 291912d5 ada.exceptions%s
-D a-flteio.ads		20190518041256 e18a47a0 ada.float_text_io%s
-D a-ioexce.ads		20190518041256 e4a01f64 ada.io_exceptions%s
-D a-stream.ads		20190518041256 119b8fb3 ada.streams%s
-D a-string.ads		20190518041256 90ac6797 ada.strings%s
-D a-strhas.ads		20190518041258 c71c2a52 ada.strings.hash%s
-D a-tags.ads		20190518041258 491b781d ada.tags%s
-D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
-D a-tiflio.ads		20190518041256 bf196650 ada.text_io.float_io%s
-D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D d_graph.ads		20200605152550 ac475cd5 d_graph%s
-D d_graph.adb		20200605152224 5d0f95c7 d_graph%b
-D d_mapa.ads		20200605145900 96ca169d d_mapa%s
-D d_mapa.adb		20200605155446 cb322ce8 d_mapa%b
-D dcua.ads		20200605145712 7500f4e8 dcua%s
-D dcua.adb		20200605145712 7587c73e dcua%b
-D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
-D hashing.ads		20200603164250 dff3156b hashing%s
-D hashing.adb		20200603164250 23100564 hashing%b
-D interfac.ads		20190518041256 5ab55268 interfaces%s
-D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20200605155552 3d591dc4 main%b
-D p_priority_queue.ads	20200605093136 281ad6ca p_priority_queue%s
-D system.ads		20190518041258 32a08138 system%s
-D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
-D s-conca3.ads		20190518041258 0b705ca5 system.concat_3%s
-D s-crtl.ads		20190518041256 0ebbdb71 system.crtl%s
-D s-exctab.ads		20190518041256 54135002 system.exception_table%s
-D s-ficobl.ads		20190518041258 078245e4 system.file_control_block%s
-D s-imgint.ads		20190518041256 02dbe0c2 system.img_int%s
-D s-parame.ads		20190518041258 48ec542b system.parameters%s
-D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
-D s-soflin.ads		20190518041256 a7318a92 system.soft_links%s
-D s-stache.ads		20190518041258 a37c21ec system.stack_checking%s
-D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
-D s-stoele.ads		20190518041258 2dc34a04 system.storage_elements%s
-D s-traent.ads		20190518041256 005bf670 system.traceback_entries%s
-D s-unstyp.ads		20190518041256 34867c83 system.unsigned_types%s
-D s-valrea.ads		20190518041258 0e7fecd5 system.val_real%s
-D s-wchcon.ads		20190518041256 1b7d22d2 system.wch_con%s
+D ada.ads		20200228061810 76789da1 ada%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-except.ads		20200228061810 a7106115 ada.exceptions%s
+D a-flteio.ads		20200228061810 e18a47a0 ada.float_text_io%s
+D a-ioexce.ads		20200228061810 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20200228061810 119b8fb3 ada.streams%s
+D a-string.ads		20200228061810 90ac6797 ada.strings%s
+D a-strhas.ads		20200228061810 c71c2a52 ada.strings.hash%s
+D a-tags.ads		20200228061810 edddc8f0 ada.tags%s
+D a-textio.ads		20200228061810 aef4d56d ada.text_io%s
+D a-tiflio.ads		20200228061810 bf196650 ada.text_io.float_io%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200605155658 ac475cd5 d_graph%s
+D d_graph.adb		20200605155658 5d0f95c7 d_graph%b
+D d_mapa.ads		20200605141738 96ca169d d_mapa%s
+D d_mapa.adb		20200605161442 7b570754 d_mapa%b
+D dcua.ads		20200510125554 7500f4e8 dcua%s
+D dcua.adb		20200510130210 7587c73e dcua%b
+D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
+D hashing.ads		20200604131510 dff3156b hashing%s
+D hashing.adb		20200604131510 23100564 hashing%b
+D interfac.ads		20200228061810 5ab55268 interfaces%s
+D i-cstrea.ads		20200228061810 e53d8b8e interfaces.c_streams%s
+D main.adb		20200605161154 c49ee0a7 main%b
+D p_priority_queue.ads	20200604170654 281ad6ca p_priority_queue%s
+D system.ads		20200228061810 32a08138 system%s
+D s-conca2.ads		20200228061810 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20200228061810 0b705ca5 system.concat_3%s
+D s-crtl.ads		20200228061810 0ebbdb71 system.crtl%s
+D s-exctab.ads		20200228061810 54135002 system.exception_table%s
+D s-ficobl.ads		20200228061810 078245e4 system.file_control_block%s
+D s-imgint.ads		20200228061810 02dbe0c2 system.img_int%s
+D s-parame.ads		20200228061810 4752c4cb system.parameters%s
+D s-secsta.ads		20200327060540 9b3ab94b system.secondary_stack%s
+D s-soflin.ads		20200228061810 a7318a92 system.soft_links%s
+D s-stache.ads		20200228061810 a37c21ec system.stack_checking%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+D s-stoele.ads		20200228061810 2dc34a04 system.storage_elements%s
+D s-traent.ads		20200228061810 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20200319060540 5ecf7212 system.unsigned_types%s
+D s-valrea.ads		20200228061810 0e7fecd5 system.val_real%s
+D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 G a e
 G c Z b b [main standard 6 11 none]
 G r i none [main standard 6 11 none] [hashing standard 9 9 none]
@@ -97,7 +96,7 @@ G r i none [main standard 6 11 none] [d_mapa standard 6 9 none]
 X 1 ada.ads
 16K9*Ada 20e8 24|1r6 1r29 2r6 2r29 3r6 3r29 4r6 16r10 19r11 63r13
 X 2 a-contai.ads
-16K13*Containers 24e19 24|3w10 3r33 16r14
+16K13*Containers 28e19 24|3w10 3r33 16r14
 19M9*Hash_Type 24|16r25 19r42
 X 4 a-flteio.ads
 20K13*Float_Text_IO[11|46] 24|2w10 2r33
@@ -108,17 +107,17 @@ X 8 a-strhas.ads
 X 10 a-textio.ads
 57K13*Text_IO 727e16 24|1w10 1r33 63r17
 64P9*File_Type 24|43r16 123r16
-66n23*In_File{66E9} 24|48r21 135r21 145r21
+66n23*In_File{66E9} 24|48r21 135r21 146r21
 77I9*Count<integer> 24|64r33
-114U14*Open 24|48s7 135s7 145s7
-129U14*Close 24|69s7 142s7 176s7
+114U14*Open 24|48s7 135s7 146s7
+129U14*Close 24|69s7 143s7 180s7
 178V13*Standard_Output{64P9} 24|64s16
-264U14*New_Line 24|65s33 102s84 184s4 190s4 196s4
-312V13*End_Of_File{boolean} 24|49s17 136s17 146s17
+264U14*New_Line 24|65s33 102s84 188s4 194s4 200s4
+312V13*End_Of_File{boolean} 24|49s17 136s17 147s17
 318U14*Set_Col 24|63s25
 465U14*Put 24|62s13 102s10 102s71
-471U14*Get_Line 24|50s10 137s10 147s10
-508U14*Put_Line 24|99s7 185s4 191s4 197s4
+471U14*Get_Line 24|50s10 137s10 148s10
+508U14*Put_Line 24|99s7 189s4 195s4 201s4
 X 11 a-tiflio.ads
 82U14*Put 24|65s13[4|20] 102s47[4|20]
 X 13 d_graph.ads
@@ -142,11 +141,21 @@ X 15 d_mapa.ads
 10R9 mapa 24|118r14[115]
 11F12 distance{float} 24|120r31[115] 126r34[115]
 12R9 t_ciutat 24|119r22[115] 124r25[115]
-13a7 nombre{string} 24|138m18[115] 157m18[115] 166m18[115]
-14i7 longitud{natural} 24|139m18[115] 158m18[115] 167m18[115]
-22U14 mapa_buit 24|132s7[115]
-23U14 put_ciutat 24|140s10[115]
-25U14 put_carretera 24|173s10[115]
+13a7 nombre{string} 24|138m18[115] 158m18[115] 167m18[115] 221m14[115] 222m14[115]
+14i7 longitud{natural} 24|139m18[115] 159m18[115] 168m18[115] 221m58[115]
+. 222m58[115]
+22U14 mapa_buit 24|132s7[115] 219s1[115]
+23U14 put_ciutat 24|140s10[115] 225s4[115] 227s4[115]
+23r25 m{10R9[24|115]} 24|140r21[115] 225r15[115] 227r15[115]
+23r41 ciutat{12R9[24|115]} 24|141r21[115] 226r15[115] 228r15[115]
+25U14 put_carretera 24|174s10[115] 229s4[115]
+25r28 m{10R9[24|115]} 24|174r24[115] 229r18[115]
+25r44 ciutat1{12R9[24|115]} 24|175r24[115] 230r18[115]
+25r53 ciutat2{12R9[24|115]} 24|176r24[115] 231r18[115]
+26f28 km{11F12[24|115]} 24|177r24[115] 232r18[115]
+30U14 imprimir_veinats 24|233s4[115]
+30r31 m{10R9[24|115]} 24|233r21[115]
+30r43 ciutat{12R9[24|115]} 24|234r21[115]
 X 20 hashing.ads
 3+9 key 24|33r7
 4+9 item 24|33r25
@@ -158,7 +167,7 @@ X 20 hashing.ads
 19U14 cvacio 24|47s7[32]
 20U14 poner 24|67s10[32]
 X 24 main.adb
-6U11*Main 6b11 214l5 214t9
+6U11*Main 6b11 237l5 237t9
 9i4 nombre_max_length{positive} 11r28 44r22 64r39 128r24
 10R9 Municipio 13e14 15r25 27r30 33r14 40r13
 11a7 nombre{string} 19r30 29r17 29r41 57m15 62r22
@@ -173,9 +182,9 @@ X 24 main.adb
 27r19 x1{10R9} 29r14 29r27
 27r23 x2{10R9} 29r38 29r51
 32K12 municipios_hashing[20|9] 34r8 37r7
-36a4 datos{string} 186r18
+36a4 datos{string} 190r18
 37r4 s{20|11R9[32]} 47m14 67m16 67r16
-39U14 Obtener_Datos 39b14 39>29 39>43 39>65 70l8 70t21 186s4
+39U14 Obtener_Datos 39b14 39>29 39>43 39>65 70l8 70t21 190s4
 39a29 file{string} 48r30
 39e43 separator{character} 53r26
 39b65 mostrarDatos{boolean} 61r13
@@ -186,31 +195,32 @@ X 24 main.adb
 44a7 aux{string} 50m28 53r16 57r34 60r28
 45i7 length{natural} 50m33 60r39
 75K12 municipios_graph[13|5] 76r8
-78a4 grafo{13|8A9[75]} 192m14
-80U14 Semana_3 80b14 80<24 106l8 106t16 192s4
+78a4 grafo{13|8A9[75]} 196m14
+80U14 Semana_3 80b14 80<24 106l8 106t16 196s4
 80a24 g{13|8A9[75]} 87m13 88m16 89m16 90m16 91m16 92m16 98r13 101r14 103r15
 82r7 it{13|9R9[75]} 98m19 100r22 101r17 103m18 103r18
 83i7 v{13|7I9[75]} 101m21 102r28
 84f7 d{13|10F9[75]} 101m24 102r57
-110a4 municipios{string} 200r14
-111a4 distancias{string} 200r26
+110a4 municipios{string}
+111a4 distancias{string}
 115K12 mallorca_d_mapa[15|6] 116r8 120r15 126r18
-118r4 mallorca{15|10R9[115]} 132m17 140m21 140r21 173m24 173r24
-119r4 ciudad1{15|12R9[115]}
-119r13 ciudad2{15|12R9[115]}
-120f4 distancia{15|11F12[115]}
-122U14 Semana_4 122b14 122>24 122>27 122>39 178l8 178t16 200s4
+118r4 mallorca{15|10R9[115]} 132m17 140m31 140r31 174m35 174r35 219m11 225m25
+. 225r25 227m25 227r25 229m29 229r29 233r31
+119r4 ciudad1{15|12R9[115]} 221m4 226r25 230r29
+119r13 ciudad2{15|12R9[115]} 222m4 228r25 231r29 234r31
+120f4 distancia{15|11F12[115]} 223m4 232r29
+122U14 Semana_4 122b14 122>24 122>27 122>39 182l8 182t16
 122a24 s1{string} 135r30
-122a27 s2{string} 145r30
-122e39 separator{character} 153r27 162r27
-123p7 fichero{10|64P9} 135m12 135r12 136r29 137r19 142m13 142r13 145m12 145r12
-. 146r29 147r19 176m13 176r13
-124r7 ciudad1{15|12R9[115]} 138m10 139m10 140r31 157m10 158m10 173r34
-124r16 ciudad2{15|12R9[115]} 166m10 167m10 173r43
-125i7 idx1{integer} 148m10 153r20 154m13 154r20 157r28 157r46 158r30 161r17
-. 166r33 166r46 167r35
-125i13 idx2{integer} 161m10 162r20 163m13 163r20 166r28 166r54 167r30 170r37
-126f7 distancia{15|11F12[115]} 170m10 173r52
-128a7 aux{string} 137m28 138r39 147m28 153r16 157r39 162r16 166r42 170r33
-129i7 length{natural} 137m33 138r28 138r46 139r28 147m33 170r45
+122a27 s2{string} 146r30
+122e39 separator{character} 154r27 163r27
+123p7 fichero{10|64P9} 135m12 135r12 136r29 137r19 143m13 143r13 146m12 146r12
+. 147r29 148r19 180m13 180r13
+124r7 ciudad1{15|12R9[115]} 138m10 139m10 141r31 158m10 159m10 175r35
+124r16 ciudad2{15|12R9[115]} 167m10 168m10 176r35
+125i7 idx1{integer} 149m10 154r20 155m13 155r20 158r28 158r46 159r30 162r17
+. 167r33 167r46 168r35
+125i13 idx2{integer} 162m10 163r20 164m13 164r20 167r28 167r54 168r30 171r37
+126f7 distancia{15|11F12[115]} 171m10 177r35
+128a7 aux{string} 137m28 138r39 148m28 154r16 158r39 163r16 167r42 171r33
+129i7 length{natural} 137m33 138r28 138r46 139r28 148m33 171r45
 

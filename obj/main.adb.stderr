@@ -1,3 +1,0 @@
-main.adb:119:04: warning: variable "ciudad1" is never read and never assigned
-main.adb:119:13: warning: variable "ciudad2" is never read and never assigned
-main.adb:120:04: warning: variable "distancia" is never read and never assigned
