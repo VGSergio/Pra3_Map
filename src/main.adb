@@ -185,9 +185,10 @@ procedure Main is
          distancia:=Float'Value(aux(idx2+1..length));
 
          --  Añadimos la carretera
-         Put_Line("Unimos las ciudades " & ciudad1.nombre
-                  & " y " & ciudad2.nombre
-                  & " con una carretera de longitud" & distancia'Image);
+         Put("Unimos las ciudades " & ciudad1.nombre(1..ciudad1.longitud)
+                  & " y " & ciudad2.nombre(1..ciudad2.longitud)
+                  & " con una carretera de longitud ");
+         Put(Float(distancia), 0, 2, 0); Put("km."); New_Line;
 
          put_carretera(m       => mallorca,
                        ciutat1 => ciudad1,
