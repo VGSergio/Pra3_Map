@@ -85,6 +85,7 @@ package body d_mapa is
       remove_edge(carreteras, v1, v2);   --  ELiminamos la carretera entre ambas                                      
    
    exception
+      when no_existe => raise city_doesnt_exist;
       when does_not_exist => raise road_doesnt_exist;
    end delete_carretera;
    
