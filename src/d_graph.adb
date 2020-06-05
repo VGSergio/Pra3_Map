@@ -145,6 +145,7 @@ package body d_graph is
    end get;
    
    -- Calculates the shortest path from v0 to v in a given graph.
+   -- TO-DO: everything
    procedure shortest_path(g: in graph; v0, v: in vertex; p: out path) is
       function smaller(x1,x2: in pcell) return boolean is
          d1: distance renames x1.d;

@@ -2,27 +2,20 @@ with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
-with hashing; with d_graph; with d_mapa;
+with hashing; with d_graph; --with d_mapa;
 procedure Main is
 
    --Segunda semana-------------------------
-   Length: Positive := 30;
-   subtype Municipio is String (1 .. Length);
+   type Municipio is record
+      nombre: String (1 .. 30);
+      length: Natural;
+   end record;
 
-   --Metodo para rellenar el String Municipio hasta su rango máximo
-   procedure Llena_Municipio (m: out Municipio; idx: in Positive) is
-   begin
-      for I in idx..m'Last loop
-         m(I):= ' ';
-      end loop;
-   end Llena_Municipio;
-
-   --Hash
    function Hash (k: in Municipio; b: in Positive) return Natural is
       h: Ada.Containers.Hash_Type;
       s: natural;
    begin
-      h:= Ada.Strings.Hash(k) mod Hash_Type(b);
+      h:= Ada.Strings.Hash(k.nombre) mod Hash_Type(b);
       s:= Natural(h);
       return s;
    end Hash;
@@ -32,7 +25,7 @@ procedure Main is
 
    function igual(x1, x2: in Municipio) return Boolean is
    begin
-      return x1=x2;
+      return x1.nombre(1..x1.length)=x2.nombre(1..x2.length);
    end igual;
 
    package municipios_hashing is new hashing
@@ -43,31 +36,33 @@ procedure Main is
    s: municipios_hashing.conjunto;
 
    procedure Obtener_Datos (file: String; separator: Character; mostrarDatos: Boolean) is
-      c: Character;
-      separatorFound: boolean;
-      name: Municipio; -- Nombre del municipio
+      muni: Municipio; -- Nombre del municipio
       area: Float;     -- Area/superficie del municipio
       idx: Integer;
       fichero: File_Type;
+      aux: String(1..50);
+      length: Natural;
    begin
       cvacio(s);
       Open(fichero, In_File, file);
       while not End_Of_File(fichero) loop
+         Get_Line(fichero, aux, length);
          idx:=1;
-         get(fichero, c);
-         separatorFound:= c=separator;
-         while not separatorFound loop
-            name(idx):=c;
+         -- Obtenemos posicion del separador
+         while aux(idx)/=separator loop
             idx:= idx+1;
-            get(fichero, c);
-            separatorFound:= c=separator;
          end loop;
-         Get(fichero, area);
-         Llena_Municipio(name, idx);
+         --  Nombre del municipio y longitud del nombre
+         muni.nombre(1..idx-1):= aux(1..idx-1);
+         muni.length:=idx-1;
+         --  Area del municipio
+         area:=Float'Value(aux(idx+1..length));
          if mostrarDatos then
-            Put(name & " "); put(area, 0, 2, 0); New_Line;
+            Put(muni.nombre(1..muni.length));          -- Nombre municipio
+            Ada.Text_IO.Set_Col(Standard_Output, 31);  -- Separación de datos
+            put(area, 0, 2, 0); New_Line;              -- Area del municipio
          end if;
-         poner(s, name, area);
+         poner(s, muni, area);
       end loop;
       Close(fichero);
    end Obtener_Datos;
