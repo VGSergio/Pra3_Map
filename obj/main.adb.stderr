@@ -1,4 +1,0 @@
-main.adb:165:34: expected type "Standard.Character"
-main.adb:165:34: found a string type
-main.adb:178:34: expected type "Standard.Character"
-main.adb:178:34: found a string type
