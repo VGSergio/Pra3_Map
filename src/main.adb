@@ -2,7 +2,7 @@ with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
-with hashing; with d_graph; --with d_mapa;
+with hashing; with d_graph; with d_mapa;
 procedure Main is
 
    --Segunda semana-------------------------
@@ -107,6 +107,12 @@ procedure Main is
    --Cuarta semana--------------------------
    municipios: String := "municipis_mallorca.txt";
    distancias: String := "distancies_mallorca.txt";
+
+   --  Mallorca tiene 67 municipios, el siguiente número primo mayor o igual es 67
+   --  primo: Integer := 67;
+
+   package mallorca_d_mapa is new d_mapa (num_ciutats => primo);
+   use mallorca_d_mapa;
 
    procedure Semana_4 (s1,s2: String) is
       fichero: File_Type;

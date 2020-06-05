@@ -1,3 +1,5 @@
+with Ada.Containers;    use Ada.Containers;
+with Ada.Strings.Hash;
 package body d_mapa is
 
    procedure mapa_buit(m: out mapa) is
@@ -28,7 +30,7 @@ package body d_mapa is
    
    procedure distancia_min(m: in mapa; ciutat1, ciutat2: in t_ciutat;
                            km: out distance) is
-   begin 
+   begin
       null;
    end distancia_min;
    
@@ -37,4 +39,19 @@ package body d_mapa is
       null;
    end imprimir_veinats;
 
+   
+   function Hash (k: in t_ciutat; b: in Positive) return Natural is
+      h: Ada.Containers.Hash_Type;
+      s: natural;
+   begin
+      h:= Ada.Strings.Hash(k.nombre) mod Hash_Type(b);
+      s:= Natural(h);
+      return s;
+   end Hash;
+   
+   function igual(x1, x2: in t_ciutat) return Boolean is
+   begin
+      return x1.nombre(1..x1.longitud)=x2.nombre(1..x2.longitud);
+   end igual;
+   
 end d_mapa;

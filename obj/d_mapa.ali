@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 V "GNAT Lib v2019"
+=======
+V "GNAT Lib v2020"
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -6,6 +10,7 @@ P ZX
 
 RN
 RV NO_FLOATING_POINT
+<<<<<<< HEAD
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
@@ -13,11 +18,23 @@ RV SPARK_05
 U d_mapa%b		d_mapa.adb		c6bd1bcf NE OO PK GE IL
 
 U d_mapa%s		d_mapa.ads		0988fc0b BN EE NE OO PK GE IL
+=======
+RV NO_IMPLEMENTATION_PRAGMAS
+
+U d_mapa%b		d_mapa.adb		057fae78 NE OO PK GE IL
+W ada%s			ada.ads			ada.ali
+W ada.containers%s	a-contai.ads		a-contai.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.hash%s	a-strhas.adb		a-strhas.ali
+
+U d_mapa%s		d_mapa.ads		ccfc614d BN EE NE OO PK GE IL
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 W d_graph%s		d_graph.adb		d_graph.ali
 Z graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
 W hashing%s		hashing.adb		hashing.ali
 Z p_priority_queue%s	p_priority_queue.adb	p_priority_queue.ali
 
+<<<<<<< HEAD
 D ada.ads		20190518041256 76789da1 ada%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D d_graph.ads		20200605094346 b40545f2 d_graph%s
@@ -75,4 +92,99 @@ X 5 d_mapa.ads
 28K12 graph[3|5] 28r68
 X 8 hashing.ads
 9k9*hashing 5|1w6 8|49e12
+=======
+D ada.ads		20200228061810 76789da1 ada%s
+D a-contai.ads		20200228061810 61e5e089 ada.containers%s
+D a-string.ads		20200228061810 90ac6797 ada.strings%s
+D a-strhas.ads		20200228061810 c71c2a52 ada.strings.hash%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200605102438 b40545f2 d_graph%s
+D d_graph.adb		20200605104826 2887bbe7 d_graph%b
+D d_mapa.ads		20200605112004 a70a31d4 d_mapa%s
+D d_mapa.adb		20200605112158 048c5577 d_mapa%b
+D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
+D hashing.ads		20200604131510 dff3156b hashing%s
+D hashing.adb		20200604131510 23100564 hashing%b
+D p_priority_queue.ads	20200604170654 281ad6ca p_priority_queue%s
+D p_priority_queue.adb	20200604151526 b70f8911 p_priority_queue%b
+D system.ads		20200228061810 32a08138 system%s
+D s-exctab.ads		20200228061810 54135002 system.exception_table%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+G a e
+G c Z s b [d_mapa standard 7 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 9|1r6 1r29 2r6 44r10 47r11
+X 2 a-contai.ads
+16K13*Containers 28e19 9|1w10 1r33 44r14
+19M9*Hash_Type 9|44r25 47r42
+X 3 a-string.ads
+16K13*Strings 35e16 9|2r10 47r15
+X 4 a-strhas.ads
+20V22*Hash{2|19M9} 9|2w18 47s23
+X 6 d_graph.ads
+3i4 size_vertices{positive} 8|39r39
+5k9*d_graph 43e12 8|2w20 39r30
+8A9 graph(32P9[8|39]) 8|44r19[39]
+31R9 cell
+32P9 pcell(31R9[8|39])
+X 8 d_mapa.ads
+5i4 num_ciutats{natural} 36r64 39r56
+7k9*d_mapa 5z4 35E12 47l5 47e11 9|3b14 57l5 57t11
+9R9*mapa 20r31 21r35 22r38 23r38 25r41 26r34 28r37 42c9 45e14 9|5r31 10r35
+. 15r38 20r38 26r41 31r34 37r37
+10F12*distance{float} 24r35 27r36 36r32 9|21r35 32r36
+11R9*t_ciutat 14e14 21r52 22r55 23r65 25r68 26r61 28r54 30r25 31r30 36r14
+. 9|10r52 15r55 20r65 26r68 31r61 37r54 43r25 52r30
+12a7 nombre{string} 9|47r30 54r17 54r43
+13i7 longitud{natural} 9|54r30 54r56
+16X4*city_already_exists
+17X4*city_doesnt_exists
+18X4*road_doesnt_exists
+20U14*mapa_buit 20<24 9|5b14 8l8 8t17
+20r24 m{9R9} 9|5b24
+21U14*put_ciutat 21=25 21>41 9|10b14 13l8 13t18
+21r25 m{9R9} 9|10b25
+21r41 ciutat{11R9} 9|10b41
+22U14*delete_ciutat 22=28 22>44 9|15b14 18l8 18t21
+22r28 m{9R9} 9|15b28
+22r44 ciutat{11R9} 9|15b44
+23U14*put_carretera 23=28 23>44 23>53 24>28 9|20b14 24l8 24t21
+23r28 m{9R9} 9|20b28
+23r44 ciutat1{11R9} 9|20b44
+23r53 ciutat2{11R9} 9|20b53
+24f28 km{10F12} 9|21b28
+25U14*delete_carretera 25=31 25>47 25>56 9|26b14 29l8 29t24
+25r31 m{9R9} 9|26b31
+25r47 ciutat1{11R9} 9|26b47
+25r56 ciutat2{11R9} 9|26b56
+26U14*distancia_min 26>28 26>40 26>49 27<28 9|31b14 35l8 35t21
+26r28 m{9R9} 9|31b28
+26r40 ciutat1{11R9} 9|31b40
+26r49 ciutat2{11R9} 9|31b49
+27f28 km{10F12} 9|32b28
+28U14*imprimir_veinats 28>31 28>43 9|37b14 40l8 40t24
+28r31 m{9R9} 9|37b31
+28r43 ciutat{11R9} 9|37b43
+30V13*Hash{natural} 30>19 30>35 36r50 9|43b13 50l8 50t12
+30r19 k{11R9} 9|43b19 47r28
+30i35 b{positive} 9|43b35 47r52
+31V13*igual{boolean} 31>19 31>23 36r84 9|52b13 55l8 55t13
+31r19 x1{11R9} 9|52b19 54r14 54r27
+31r23 x2{11R9} 9|52b23 54r40 54r53
+35K12 mapa_hashing[11|9] 37r8
+39K12 mapa_graph[6|5] 40r8
+43r7 ciudad{11|11R9[35]}
+44a7 conexiones{6|8A9[39]}
+X 9 d_mapa.adb
+44m7 h{2|19M9} 47m7 48r19
+45i7 s{natural} 48m7 49r14
+X 11 hashing.ads
+3+9 key 8|36r7
+4+9 item 8|36r24
+5V18 hash{natural} 8|36r42
+6i4 size{positive} 8|36r56
+7V19 "="{boolean} 8|36r78
+9k9*hashing 8|2w6 35r32 11|49e12
+11R9 conjunto 8|43r15[35]
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 

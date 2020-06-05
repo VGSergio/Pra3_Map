@@ -7,7 +7,10 @@ package d_mapa is
 
    type mapa is limited private; -- tipus corresponent al TAD
    subtype distance is float;
-   type t_ciutat is new String;
+   type t_ciutat is record
+      nombre: String(1..30);
+      longitud: Natural;
+   end record;
    
    city_already_exists: exception;
    city_doesnt_exists: exception;
@@ -23,13 +26,21 @@ package d_mapa is
                            km: out distance);
    procedure imprimir_veinats(m: in mapa; ciutat: in t_ciutat);
    
+   function Hash (k: in t_ciutat; b: in Positive) return Natural;   
+   function igual(x1, x2: in t_ciutat) return Boolean;
+
 private
 
-   package graph is new d_graph(size_vertices => num_ciutats); use graph;
+   package mapa_hashing is new hashing
+     (key => t_ciutat, item => distance, hash => Hash, size => num_ciutats, "=" => igual);
+   use mapa_hashing;
    
+   package mapa_graph is new d_graph (size_vertices => num_ciutats);
+   use mapa_graph;   
+
    type mapa is record
-      null;
+      ciudad: conjunto;
+      conexiones: graph;
    end record;
-   
-   
+
 end d_mapa;

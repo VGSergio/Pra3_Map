@@ -1,4 +1,4 @@
-V "GNAT Lib v2019"
+V "GNAT Lib v2020"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -14,7 +14,6 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
-RV SPARK_05
 
 U d_graph%b		d_graph.adb		f119bf30 NE OO PK GE IL
 W graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
@@ -22,6 +21,7 @@ W p_priority_queue%s	p_priority_queue.adb	p_priority_queue.ali
 
 U d_graph%s		d_graph.ads		b40545f2 BN EE NE OO PK GE IL
 
+<<<<<<< HEAD
 D ada.ads		20190518041256 76789da1 ada%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D d_graph.ads		20200605094346 b40545f2 d_graph%s
@@ -32,20 +32,42 @@ D p_priority_queue.adb	20200604121118 b70f8911 p_priority_queue%b
 D system.ads		20190518041258 32a08138 system%s
 D s-exctab.ads		20190518041256 54135002 system.exception_table%s
 D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+=======
+D ada.ads		20200228061810 76789da1 ada%s
+D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200605102438 b40545f2 d_graph%s
+D d_graph.adb		20200605104826 2887bbe7 d_graph%b
+D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
+D p_priority_queue.ads	20200604170654 281ad6ca p_priority_queue%s
+D p_priority_queue.adb	20200604151526 b70f8911 p_priority_queue%b
+D system.ads		20200228061810 32a08138 system%s
+D s-exctab.ads		20200228061810 54135002 system.exception_table%s
+D s-stalib.ads		20200228061810 6b7a13f2 system.standard_library%s
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 G a e
 G c Z s b [d_graph standard 5 9 none]
 X 3 d_graph.ads
 3i4 size_vertices{positive} 7r43 11r28
+<<<<<<< HEAD
 5k9*d_graph 3z4 31E9 43l5 43e12 4|3b14 183l5 183t12
 7I9*vertex<integer> 15r49 16r52 17r48 19r41 22r57 23r57 25r45 27r51 34r10
 . 38r25 4|8r16 14r48 37r52 84r49 102r40 130r56 139r57 149r51 169r42 170r30
+=======
+5k9*d_graph 3z4 31E9 43l5 43e12 4|3b14 184l5 184t12
+7I9*vertex<integer> 15r49 16r52 17r48 19r41 22r57 23r57 25r45 27r51 34r10
+. 38r25 4|8r16 14r48 37r52 84r49 102r40 130r56 139r57 149r51 170r42 171r30
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 8A9*graph(32P9) 14r28 15r34 16r37 17r33 19r28 20r26 22r25 23r25 27r34 38c9
 . 4|6r28 14r33 37r37 84r33 102r27 110r26 130r25 139r25 149r34
 9R9*iterator 19r57 20r44 21r29 22r39 23r39 39c9 41e14 4|102r56 110r44 118r29
 . 130r39 139r39
 10F9*distance<float> 12r20 12r31 15r63 17r63 23r73 35r10 4|14r62 84r64 86r10
 . 139r73 151r14 152r14 158r14 159r14
+<<<<<<< HEAD
 11i4*nv{positive} 4|164r54 169r35 177r19
+=======
+11i4*nv{positive} 4|164r54 170r35 178r19
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 12f4*infty{10F9} 4|51r22 71r22 86r22
 14U14*empty 14<21 4|6b14 11l8 11t13
 14a21 g{8A9} 4|6b21 9m10
@@ -81,14 +103,22 @@ X 3 d_graph.ads
 23i50 y{7I9} 4|139b50 143m7
 23f66 d{10F9} 4|139b66 144m7
 25A9*path(7I9)<integer> 27r66 4|149r66
+<<<<<<< HEAD
 27U14*shortest_path 27>28 27>41 27>45 27<59 4|149b14 181l8 181t21
+=======
+27U14*shortest_path 27>28 27>41 27>45 27<59 4|149b14 182l8 182t21
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 27a28 g{8A9} 4|149b28
 27i41 v0{7I9} 4|149b41
 27i45 v{7I9} 4|149b45
 27a59 p{25A9} 4|149b59
 31R9 cell 32r25 33c9 37e14 4|27r15 31r15
 32P9 pcell(31R9) 36r14 38r36 40r11 4|15r10 38r19 85r12 103r10 111r10 119r10
+<<<<<<< HEAD
 . 131r10 140r10 150r34 157r33 165r52
+=======
+. 131r10 140r10 150r34 157r33 165r54
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 34i7 x{7I9} 4|22r15 46r18 66r18 91r17 134r12 143r12
 35f7 d{10F9} 4|51m18 71m18 94r21 144r12 151m34 152m34 158m34 159m34
 36p7 next{32P9} 4|23r15 48r25 54r29 56m21 56r34 68r25 74r29 76m21 76r34 92r23
@@ -108,16 +138,25 @@ X 4 d_graph.adb
 119p7 p{3|32P9} 121r10
 131p7 p{3|32P9} 133r10 134r10
 140p7 p{3|32P9} 142r10 143r10 144r10
+<<<<<<< HEAD
 150V16 smaller{boolean} 150b16 150>24 150>27 155l11 155t18 166r52
+=======
+150V16 smaller{boolean} 150b16 150>24 150>27 155l11 155t18 166r54
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 150p24 x1{3|32P9} 151r31
 150p27 x2{3|32P9} 152r31
 151f10 d1{3|10F9} 154r17
 152f10 d2{3|10F9} 154r20
+<<<<<<< HEAD
 157V16 bigger{boolean} 157b16 157>23 157>26 162l11 162t17 167r52
+=======
+157V16 bigger{boolean} 157b16 157>23 157>26 162l11 162t17 167r54
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 157p23 x1{3|32P9} 158r31
 157p26 x2{3|32P9} 159r31
 158f10 d1{3|10F9} 161r17
 159f10 d2{3|10F9} 161r20
+<<<<<<< HEAD
 164K15 p_heap[6|6] 167r65
 169A12 heap_space(3|7I9)<integer> 173r14
 170A12 pos_heap(natural)<3|7I9> 174r12
@@ -125,6 +164,15 @@ X 4 d_graph.adb
 173a7 space{169A12}
 174a7 pos{170A12}
 177i11 i{integer}
+=======
+164K15 p_heap[6|6] 168r11
+170A12 heap_space(3|7I9)<integer> 174r14
+171A12 pos_heap(natural)<3|7I9> 175r12
+173r7 unvisited{6|8R9[164]}
+174a7 space{170A12}
+175a7 pos{171A12}
+178i11 i{integer}
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 X 5 graph_exceptions.ads
 1K9*graph_exceptions 4|1w6 1r28 5|6e21
 2X4*already_exists 4|22r30
@@ -132,9 +180,17 @@ X 5 graph_exceptions.ads
 4X4*bad_use 4|113r28 133r28 142r28
 X 6 p_priority_queue.ads
 2i4 size{positive} 4|164r46
+<<<<<<< HEAD
 3+9 item 4|165r44
 4V19 "<"{boolean} 4|166r45
 5V19 ">"{boolean} 4|167r45
 6k9*p_priority_queue 4|2w6 164r29 6|28e21
 8R9 priority_queue 4|172r18[164]
+=======
+3+9 item 4|165r46
+4V19 "<"{boolean} 4|166r47
+5V19 ">"{boolean} 4|167r47
+6k9*p_priority_queue 4|2w6 164r29 6|28e21
+8R9 priority_queue 4|173r18[164]
+>>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 
