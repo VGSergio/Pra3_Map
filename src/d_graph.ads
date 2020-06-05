@@ -4,7 +4,7 @@ generic
 
 package d_graph is
 
-   type vertex is new positive range 1 .. size_vertices;
+   type vertex is new Positive range 1 .. size_vertices;
    type graph is limited private;
    type iterator is private;
    type distance is new float range 0.0 .. float'last;
@@ -16,7 +16,7 @@ package d_graph is
    procedure remove_edge (g: in out graph; x,y: in vertex);
    function get_distance (g: in graph; x,y: in vertex) return distance;
    
-   procedure first (g: in  graph; x: in vertex; it: out iterator);
+   procedure first (g: in graph; x: in vertex; it: out iterator);
    procedure next (g: in graph; it: in out iterator);
    function is_valid(it: in iterator) return boolean;
    procedure get (g: in graph; it: in iterator;  y: out vertex);

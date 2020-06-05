@@ -6,8 +6,9 @@ with hashing; with d_graph; with d_mapa;
 procedure Main is
 
    --Segunda semana-------------------------
+   nombre_max_length: Positive := 30;
    type Municipio is record
-      nombre: String (1 .. 30);
+      nombre: String (1 .. nombre_max_length);
       length: Natural;
    end record;
 
@@ -21,7 +22,7 @@ procedure Main is
    end Hash;
 
    --Mallorca tiene 67 municipios, el siguiente número primo mayor o igual es 67
-   primo: Integer := 67;
+   primo: Positive := 67;
 
    function igual(x1, x2: in Municipio) return Boolean is
    begin
@@ -40,7 +41,7 @@ procedure Main is
       area: Float;     -- Area/superficie del municipio
       idx: Integer;
       fichero: File_Type;
-      aux: String(1..50);
+      aux: String(1..nombre_max_length+20);
       length: Natural;
    begin
       cvacio(s);
@@ -59,7 +60,8 @@ procedure Main is
          area:=Float'Value(aux(idx+1..length));
          if mostrarDatos then
             Put(muni.nombre(1..muni.length));          -- Nombre municipio
-            Ada.Text_IO.Set_Col(Standard_Output, 31);  -- Separación de datos
+            Ada.Text_IO.Set_Col
+              (Standard_Output, count(nombre_max_length+1));  -- Separación de datos
             put(area, 0, 2, 0); New_Line;              -- Area del municipio
          end if;
          poner(s, muni, area);
@@ -69,8 +71,8 @@ procedure Main is
    -----------------------------------------
 
    --Tercera semana-------------------------
-   prueba: Integer := 4;
-   package municipios_graph is new d_graph (size_vertices => prueba);
+   -- La tercera semana usa 4 verices
+   package municipios_graph is new d_graph (size_vertices => 4);
    use municipios_graph;
 
    grafo: graph;
@@ -108,10 +110,8 @@ procedure Main is
    municipios: String := "municipis_mallorca.txt";
    distancias: String := "distancies_mallorca.txt";
 
-   --  Mallorca tiene 67 municipios, el siguiente número primo mayor o igual es 67
-   --  primo: Integer := 67;
-
-   package mallorca_d_mapa is new d_mapa (num_ciutats => primo);
+   --  Mallorca tiene 67 municipios
+   package mallorca_d_mapa is new d_mapa (num_ciutats => 67);
    use mallorca_d_mapa;
 
    procedure Semana_4 (s1,s2: String) is

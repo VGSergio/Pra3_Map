@@ -29,8 +29,9 @@ package body ada_main is
    E112 : Short_Integer; pragma Import (Ada, E112, "ada__finalization_E");
    E111 : Short_Integer; pragma Import (Ada, E111, "system__file_io_E");
    E099 : Short_Integer; pragma Import (Ada, E099, "ada__text_io_E");
+   E143 : Short_Integer; pragma Import (Ada, E143, "dcua_E");
    E137 : Short_Integer; pragma Import (Ada, E137, "graph_exceptions_E");
-   E143 : Short_Integer; pragma Import (Ada, E143, "hashing_E");
+   E145 : Short_Integer; pragma Import (Ada, E145, "hashing_E");
    E139 : Short_Integer; pragma Import (Ada, E139, "p_priority_queue_E");
    E136 : Short_Integer; pragma Import (Ada, E136, "d_graph_E");
    E141 : Short_Integer; pragma Import (Ada, E141, "d_mapa_E");
@@ -205,9 +206,10 @@ package body ada_main is
       Ada.Text_Io'Elab_Spec;
       Ada.Text_Io'Elab_Body;
       E099 := E099 + 1;
+      E143 := E143 + 1;
       graph_exceptions'elab_spec;
       E137 := E137 + 1;
-      E143 := E143 + 1;
+      E145 := E145 + 1;
       E139 := E139 + 1;
       E136 := E136 + 1;
       E141 := E141 + 1;
@@ -248,6 +250,7 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
+   --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\dcua.o
    --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\graph_exceptions.o
    --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\hashing.o
    --   C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\p_priority_queue.o
