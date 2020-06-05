@@ -1,0 +1,4 @@
+main.adb:48:16: expected type "Municipio" defined at line 9
+main.adb:48:16: found a string type
+main.adb:49:20: expected type "Municipio" defined at line 9
+main.adb:49:20: found a string type

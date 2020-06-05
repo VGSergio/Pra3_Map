@@ -1,0 +1,78 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -mtune=generic
+A -march=x86-64
+P ZX
+
+RN
+RV NO_FLOATING_POINT
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U d_mapa%b		d_mapa.adb		c6bd1bcf NE OO PK GE IL
+
+U d_mapa%s		d_mapa.ads		0988fc0b BN EE NE OO PK GE IL
+W d_graph%s		d_graph.adb		d_graph.ali
+Z graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
+W hashing%s		hashing.adb		hashing.ali
+Z p_priority_queue%s	p_priority_queue.adb	p_priority_queue.ali
+
+D ada.ads		20190518041256 76789da1 ada%s
+D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
+D d_graph.ads		20200605094346 b40545f2 d_graph%s
+D d_graph.adb		20200605102330 2887bbe7 d_graph%b
+D d_mapa.ads		20200605110920 627eac92 d_mapa%s
+D d_mapa.adb		20200605110948 a4c3b75d d_mapa%b
+D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
+D hashing.ads		20200603164250 dff3156b hashing%s
+D p_priority_queue.ads	20200605093136 281ad6ca p_priority_queue%s
+D p_priority_queue.adb	20200604121118 b70f8911 p_priority_queue%b
+D system.ads		20190518041258 32a08138 system%s
+D s-exctab.ads		20190518041256 54135002 system.exception_table%s
+D s-stalib.ads		20190518041258 09bd3940 system.standard_library%s
+G a e
+G c Z s b [d_mapa standard 6 9 none]
+X 3 d_graph.ads
+3i4 size_vertices{positive} 5|28r33
+5k9*d_graph 43e12 5|1w20 28r25
+X 5 d_mapa.ads
+4i4 num_ciutats{natural} 28r50
+6k9*d_mapa 4z4 28E12 35l5 35e11 6|1b14 40l5 40t11
+8R9*mapa 16r31 17r35 18r38 19r38 21r41 22r34 24r37 30c9 32e14 6|3r31 8r35
+. 13r38 18r38 24r41 29r34 35r37
+9F12*distance{float} 20r35 23r36 6|19r35 30r36
+10A9*t_ciutat<string>(character)<integer> 17r52 18r55 19r65 21r68 22r61 24r54
+. 6|8r52 13r55 18r65 24r68 29r61 35r54
+12X4*city_already_exists
+13X4*city_doesnt_exists
+14X4*road_doesnt_exists
+16U14*mapa_buit 16<24 6|3b14 6l8 6t17
+16r24 m{8R9} 6|3b24
+17U14*put_ciutat 17=25 17>41 6|8b14 11l8 11t18
+17r25 m{8R9} 6|8b25
+17a41 ciutat{10A9} 6|8b41
+18U14*delete_ciutat 18=28 18>44 6|13b14 16l8 16t21
+18r28 m{8R9} 6|13b28
+18a44 ciutat{10A9} 6|13b44
+19U14*put_carretera 19=28 19>44 19>53 20>28 6|18b14 22l8 22t21
+19r28 m{8R9} 6|18b28
+19a44 ciutat1{10A9} 6|18b44
+19a53 ciutat2{10A9} 6|18b53
+20f28 km{9F12} 6|19b28
+21U14*delete_carretera 21=31 21>47 21>56 6|24b14 27l8 27t24
+21r31 m{8R9} 6|24b31
+21a47 ciutat1{10A9} 6|24b47
+21a56 ciutat2{10A9} 6|24b56
+22U14*distancia_min 22>28 22>40 22>49 23<28 6|29b14 33l8 33t21
+22r28 m{8R9} 6|29b28
+22a40 ciutat1{10A9} 6|29b40
+22a49 ciutat2{10A9} 6|29b49
+23f28 km{9F12} 6|30b28
+24U14*imprimir_veinats 24>31 24>43 6|35b14 38l8 38t24
+24r31 m{8R9} 6|35b31
+24a43 ciutat{10A9} 6|35b43
+28K12 graph[3|5] 28r68
+X 8 hashing.ads
+9k9*hashing 5|1w6 8|49e12
+
