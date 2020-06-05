@@ -22,9 +22,9 @@ package d_graph is
    procedure get (g: in graph; it: in iterator;  y: out vertex);
    procedure get (g: in graph; it: in iterator;  y: out vertex;  d: out distance);
    
---     type path is array (Natural range <>) of vertex;
---     
---     procedure shortest_path(g: in graph; v0, v: in vertex; p: out path);
+   type path is array (Natural range <>) of vertex;
+   
+   procedure shortest_path(g: in graph; v0, v: in vertex; p: out path);
    
 private
    

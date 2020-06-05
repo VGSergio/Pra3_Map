@@ -85,7 +85,7 @@ package body d_graph is
       aux: pcell;
       d: distance := infty;   -- If it stays as infinity, edge does not exist
    begin
-      if g(x)=null or g(y)=null then raise does_not_exist; end if;
+      if g(x)=null or g(y)=null then return d; end if;
       aux:= g(x);
       while aux /= null loop  -- We iterate through the list of edges
          if aux.x /= y then
@@ -95,7 +95,6 @@ package body d_graph is
             aux:=null;        -- Set aux to null so we can exit the loop.
          end if;
       end loop;
-      if d = infty then raise does_not_exist; end if;
       return d;
    end get_distance;   
    
@@ -145,27 +144,39 @@ package body d_graph is
       d:=p.d;
    end get;
    
---     -- Calculates the shortest path from v0 to v in a given graph.
---     procedure shortest_path(g: in graph; v0, v: in vertex; p: out path) is
---        
---        -- VD is formed by a vertex and its shortest distance to v0 found.
---        -- It will be used to store each of the vertices which have not yet been  
---        -- visited in the heap.
---        type VD is record
---           v: vertex;
---           d: distance;
---        end record;
---        
---        function lesser(x1,x2: in SD) 
---        
---        package heap is new p_priority_queue(size => ,
---                                             item => ,
---                                             "<"  => ,
---                                             ">"  => ); use heap;
---        
---        
---     begin
---        null;
---     end shortest_path;
+   -- Calculates the shortest path from v0 to v in a given graph.
+   procedure shortest_path(g: in graph; v0, v: in vertex; p: out path) is
+      function smaller(x1,x2: in pcell) return boolean is
+         d1: distance renames x1.d;
+         d2: distance renames x2.d;
+      begin
+         return d1<d2;
+      end smaller;
+      
+      function bigger(x1,x2: in pcell) return boolean is
+         d1: distance renames x1.d;
+         d2: distance renames x2.d;
+      begin
+         return d1>d2;
+      end bigger;
+      
+      package p_heap is new p_priority_queue(size => nv,
+                                           item => pcell,
+                                           "<"  => smaller,
+                                           ">"  => bigger); use p_heap;
+      
+      type heap_space is array(1..nv) of vertex;
+      type pos_heap is array(vertex) of natural;
+      
+      unvisited: priority_queue;
+      space: heap_space;
+      pos: pos_heap;
+      
+   begin
+      for i in 1..nv loop
+         null;
+      end loop;
+      
+   end shortest_path;
    
 end d_graph;

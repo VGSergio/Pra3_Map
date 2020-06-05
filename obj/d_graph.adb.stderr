@@ -1,0 +1,3 @@
+d_graph.adb:171:07: warning: variable "unvisited" is never read and never assigned
+d_graph.adb:172:07: warning: variable "space" is never read and never assigned
+d_graph.adb:173:07: warning: variable "pos" is never read and never assigned
