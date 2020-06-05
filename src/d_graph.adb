@@ -162,9 +162,10 @@ package body d_graph is
       end bigger;
       
       package p_heap is new p_priority_queue(size => nv,
-                                           item => pcell,
-                                           "<"  => smaller,
-                                           ">"  => bigger); use p_heap;
+                                             item => pcell,
+                                             "<"  => smaller,
+                                             ">"  => bigger);
+      use p_heap;
       
       type heap_space is array(1..nv) of vertex;
       type pos_heap is array(vertex) of natural;
