@@ -65,7 +65,6 @@ package body d_mapa is
       carreteras: graph renames m.carreteras;
       v1, v2: vertex;
    begin
-
       consultar(ciudades, ciutat1, v1);  --  Obtenemos el vertex que ocupa la ciudad1
       consultar(ciudades, ciutat2, v2);  --  Obtenemos el vertex que ocupa la ciudad2
       put_edge(carreteras, v1, v2, mapa_graph.distance(km));  --  Ponemos la carretera entre ambas

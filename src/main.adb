@@ -162,7 +162,7 @@ procedure Main is
          ciudad1.longitud := idx1-1;
          --  Rellenamos el nombre
          for I in ciudad1.longitud+1..ciudad1.nombre'Last loop
-            ciudad1.nombre(I) := " ";
+            ciudad1.nombre(I) := ' ';
          end loop;
 
          --  Obtenemos la segunda ciudad
@@ -175,7 +175,7 @@ procedure Main is
          ciudad2.longitud := idx2-idx1-1;
          --  Rellenamos el nombre
          for I in ciudad2.longitud+1..ciudad2.nombre'Last loop
-            ciudad2.nombre(I) := " ";
+            ciudad2.nombre(I) := ' ';
          end loop;
 
          --  Obtenemos la distancia de la carretera
