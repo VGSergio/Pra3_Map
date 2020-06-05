@@ -1,4 +1,4 @@
-V "GNAT Lib v2019"
+V "GNAT Lib v2020"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -13,15 +13,14 @@ RV NO_LOCAL_ALLOCATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
-RV SPARK_05
 
 U hashing%b		hashing.adb		fce3100f NE OO PK GE IL
 
 U hashing%s		hashing.ads		dff3156b BN EE NE OO PK GE IL
 
-D hashing.ads		20200603164250 dff3156b hashing%s
-D hashing.adb		20200603164250 23100564 hashing%b
-D system.ads		20190518041258 32a08138 system%s
+D hashing.ads		20200604131510 dff3156b hashing%s
+D hashing.adb		20200604131510 23100564 hashing%b
+D system.ads		20200228061810 32a08138 system%s
 G a e
 G c Z s b [hashing standard 9 9 none]
 X 1 hashing.ads

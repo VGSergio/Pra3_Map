@@ -160,6 +160,10 @@ procedure Main is
          -- Guardamos la primera ciudad
          ciudad1.nombre(1..idx1-1) := aux(1..idx1-1);
          ciudad1.longitud := idx1-1;
+         --  Rellenamos el nombre
+         for I in ciudad1.longitud+1..ciudad1.nombre'Last loop
+            ciudad1.nombre(I) := " ";
+         end loop;
 
          --  Obtenemos la segunda ciudad
          idx2:= idx1+1;
@@ -169,13 +173,17 @@ procedure Main is
          -- Guardamos la segunda ciudad
          ciudad2.nombre(1..idx2-idx1) := aux(idx1+1..idx2);
          ciudad2.longitud := idx2-idx1-1;
+         --  Rellenamos el nombre
+         for I in ciudad2.longitud+1..ciudad2.nombre'Last loop
+            ciudad2.nombre(I) := " ";
+         end loop;
 
          --  Obtenemos la distancia de la carretera
          distancia:=Float'Value(aux(idx2+1..length));
 
          --  Añadimos la carretera
-         Put_Line("Unimos las ciudades " & ciudad1.nombre(1..ciudad1.longitud)
-                  & " y " & ciudad2.nombre(1..ciudad2.longitud)
+         Put_Line("Unimos las ciudades " & ciudad1.nombre
+                  & " y " & ciudad2.nombre
                   & " con una carretera de longitud" & distancia'Image);
 
          put_carretera(m       => mallorca,
