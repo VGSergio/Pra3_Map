@@ -197,18 +197,36 @@ begin
    Put_Line("Cuarta Semana");
 
    --  Carga de datos
+
+--     mapa_buit(mallorca);
+--
+--     ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
+--     ciudad2:=(nombre => "Sineu                         ", longitud => 5);
+--     distancia:= 1.0;
+--
+--     put_ciutat(m      => mallorca,
+--                ciutat => ciudad1);
+--     put_ciutat(m      => mallorca,
+--                ciutat => ciudad2);
+--     put_carretera(m       => mallorca,
+--                   ciutat1 => ciudad1,
+--                   ciutat2 => ciudad2,
+--                   km      => distancia);
+--     imprimir_veinats(m      => mallorca,
+--                      ciutat => ciudad2);
+
    Semana_4 (municipios, distancias, ';');
 
-   --  --  Distancia minima
-   --  New_Line;
-   --  ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
-   --  ciudad2:=(nombre => "Sineu                         ", longitud => 5);
-   --  distancia_min(mallorca, ciudad1, ciudad2, distancia);
-   --
-   --  --  Imprimir vecinos
-   --  New_Line;
-   --  ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
-   --  imprimir_veinats(mallorca, ciudad1);
+   --  Distancia minima
+   New_Line;
+   ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
+   ciudad2:=(nombre => "Sineu                         ", longitud => 5);
+   distancia_min(mallorca, ciudad1, ciudad2, distancia);
+
+   --  Imprimir vecinos
+   New_Line;
+   ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
+   imprimir_veinats(mallorca, ciudad1);
    -----------------------------------------
 
 end Main;
