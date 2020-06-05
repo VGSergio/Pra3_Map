@@ -13,7 +13,7 @@ RV NO_STANDARD_STORAGE_POOLS
 RV NO_IMPLEMENTATION_PRAGMAS
 RV SPARK_05
 
-U d_mapa%b		d_mapa.adb		419bde30 NE OO PK GE IL
+U d_mapa%b		d_mapa.adb		eb49805f NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
@@ -23,7 +23,7 @@ Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
 
-U d_mapa%s		d_mapa.ads		907eabcb BN EE NE OO PK GE IL
+U d_mapa%s		d_mapa.ads		b3ebd425 BN EE NE OO PK GE IL
 W d_graph%s		d_graph.adb		d_graph.ali
 W dcua%s		dcua.adb		dcua.ali
 Z graph_exceptions%s	graph_exceptions.ads	graph_exceptions.ali
@@ -44,8 +44,8 @@ D a-tiflio.ads		20190518041256 bf196650 ada.text_io.float_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
 D d_graph.ads		20200605152550 ac475cd5 d_graph%s
 D d_graph.adb		20200605152224 5d0f95c7 d_graph%b
-D d_mapa.ads		20200605145900 96ca169d d_mapa%s
-D d_mapa.adb		20200605164020 7b570754 d_mapa%b
+D d_mapa.ads		20200605171606 b55f6973 d_mapa%s
+D d_mapa.adb		20200605171648 f21026d5 d_mapa%b
 D dcua.ads		20200605145712 7500f4e8 dcua%s
 D dcua.adb		20200605145712 7587c73e dcua%b
 D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
@@ -113,9 +113,9 @@ X 15 d_mapa.ads
 13a7 nombre{string} 16|114r57 117r45 130r30 137r17 137r43
 14i7 longitud{natural} 16|114r74 117r74 137r30 137r56
 17X4*city_already_exists 16|36r36
-18X4*city_doesnt_exists 16|59r39 73r31 98r31 122r31
+18X4*city_doesnt_exist 16|59r39 73r31 98r31 122r31
 19X4*road_already_exists 16|74r36
-20X4*road_doesnt_exists 16|88r31
+20X4*road_doesnt_exist 16|88r36
 22U14*mapa_buit 22<24 16|8b14 13l8 13t17
 22r24 m{10R9} 16|8b24 10m14 10r14 11m13 11r13
 23U14*put_ciutat 23=25 23>41 16|15b14 37l8 37t18
@@ -192,7 +192,7 @@ X 17 dcua.ads
 X 19 graph_exceptions.ads
 1K9*graph_exceptions 16|5w6 5r29 19|6e21
 2X4*already_exists 16|36r12 74r12
-3X4*does_not_exist 16|59r15
+3X4*does_not_exist 16|59r15 88r12
 X 20 hashing.ads
 3+9 key 15|41r7
 4+9 item 15|41r24
@@ -202,7 +202,7 @@ X 20 hashing.ads
 9k9*hashing 15|1w6 40r32 20|49e12
 11R9 conjunto 15|48r17[40] 16|16r17[15|40] 40r17[15|40] 64r17[15|40] 78r17[15|40]
 . 102r17[15|40]
-15X4 no_existe 16|73r12[15|40] 88r12[15|40] 98r12[15|40] 122r12[15|40]
+15X4 no_existe 16|73r12[15|40] 98r12[15|40] 122r12[15|40]
 19U14 cvacio 16|10s7[15|40]
 20U14 poner 16|31s7[15|40]
 21U14 consultar 16|46s7[15|40] 68s7[15|40] 69s7[15|40] 83s7[15|40] 84s7[15|40]

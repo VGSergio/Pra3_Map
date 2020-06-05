@@ -15,9 +15,9 @@ package d_mapa is
    end record;
    
    city_already_exists: exception;
-   city_doesnt_exists: exception;
+   city_doesnt_exist: exception;
    road_already_exists: exception;
-   road_doesnt_exists: exception;
+   road_doesnt_exist: exception;
    
    procedure mapa_buit(m: out mapa);
    procedure put_ciutat(m: in out mapa; ciutat: in t_ciutat);
