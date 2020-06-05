@@ -137,7 +137,11 @@ procedure Main is
          Get_Line(fichero, aux, length);  -- Nombre y longitud del mismo
          ciudad1.nombre(1..length) := aux(1..length);
          ciudad1.longitud:=length;
-         put_ciutat(mallorca, ciudad1);  -- Los cargamos en el mapa
+
+         Put_Line("Introducimos la ciudad " & ciudad1.nombre(1..ciudad1.longitud));
+
+         put_ciutat(m      => mallorca,
+                    ciutat => ciudad1);  -- Los cargamos en el mapa
       end loop;
       Close(fichero);
 
@@ -170,7 +174,14 @@ procedure Main is
          distancia:=Float'Value(aux(idx2+1..length));
 
          --  Añadimos la carretera
-         put_carretera(mallorca, ciudad1, ciudad2, distancia);
+         Put_Line("Unimos las ciudades " & ciudad1.nombre(1..ciudad1.longitud)
+                  & " y " & ciudad2.nombre(1..ciudad2.longitud)
+                  & " con una carretera de longitud" & distancia'Image);
+
+         put_carretera(m       => mallorca,
+                       ciutat1 => ciudad1,
+                       ciutat2 => ciudad2,
+                       km      => distancia);
 
       end loop;
       Close(fichero);
@@ -198,23 +209,6 @@ begin
 
    --  Carga de datos
 
---     mapa_buit(mallorca);
---
---     ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
---     ciudad2:=(nombre => "Sineu                         ", longitud => 5);
---     distancia:= 1.0;
---
---     put_ciutat(m      => mallorca,
---                ciutat => ciudad1);
---     put_ciutat(m      => mallorca,
---                ciutat => ciudad2);
---     put_carretera(m       => mallorca,
---                   ciutat1 => ciudad1,
---                   ciutat2 => ciudad2,
---                   km      => distancia);
---     imprimir_veinats(m      => mallorca,
---                      ciutat => ciudad2);
-
    Semana_4 (municipios, distancias, ';');
 
    --  Distancia minima
@@ -227,6 +221,7 @@ begin
    New_Line;
    ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
    imprimir_veinats(mallorca, ciudad1);
-   -----------------------------------------
+   delete_ciutat(mallorca, ciudad1);
+
 
 end Main;

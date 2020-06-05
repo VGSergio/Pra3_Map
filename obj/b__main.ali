@@ -18,12 +18,12 @@ RV NO_ELABORATION_CODE
 RV NO_OBSOLESCENT_FEATURES
 RV SPARK_05
 
-U ada_main%b		b__main.adb		3987a35a OO PK IL
+U ada_main%b		b__main.adb		47f947ac OO PK IL
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 Z system%s		system.ads		system.ali
 
-U ada_main%s		b__main.ads		af0eba5b EE NE OO PK IL
+U ada_main%s		b__main.ads		d1705ead EE NE OO PK IL
 W system%s		system.ads		system.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
 W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
@@ -31,8 +31,8 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 D ada.ads		20190518041256 76789da1 ada%s
 D a-except.ads		20190518041256 291912d5 ada.exceptions%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D b__main.ads		20200605161328 f5f9897e ada_main%s
-D b__main.adb		20200605161328 e56738f1 ada_main%b
+D b__main.ads		20200605162748 8b876d88 ada_main%s
+D b__main.adb		20200605162748 e56738f1 ada_main%b
 D system.ads		20190518041258 32a08138 system%s
 D s-parame.ads		20190518041258 48ec542b system.parameters%s
 D s-secsta.ads		20190518041258 20bbe636 system.secondary_stack%s
@@ -51,7 +51,7 @@ X 1 ada.ads
 X 2 a-except.ads
 54K13*Exceptions 349e19 5|6w10
 X 4 b__main.ads
-6K9*ada_main 497l5 497e13 5|8b14 265l5 265t13
+6K9*ada_main 515l5 515e13 5|8b14 265l5 265t13
 8i4*gnat_argc{integer} 12m22 12r22 5|237m7
 9m4*gnat_argv{6|67M9} 13m22 13r22 5|238m7
 10m4*gnat_envp{6|67M9} 14m22 14r22 5|239m7
@@ -77,7 +77,8 @@ X 4 b__main.ads
 . 262r22 264r22 266r22 268r22 270r22 272r22 274r22 276r22 278r22 280r22 282r22
 . 284r22 286r22 288r22 290r22 292r22 294r22 296r22 298r22 300r22 302r22 304r22
 . 306r22 308r22 310r22 312r22 314r22 316r22 318r22 320r22 322r22 324r22 326r22
-. 328r22 330r22 332r22 334r22 336r22 338r22 340r22
+. 328r22 330r22 332r22 334r22 336r22 338r22 340r22 342r22 344r22 346r22 348r22
+. 350r22 352r22
 40m4*u00001{39M9} 41r22
 42m4*u00002{39M9} 43r22
 44m4*u00003{39M9} 45r22
@@ -229,6 +230,12 @@ X 4 b__main.ads
 336m4*u00149{39M9} 337r22
 338m4*u00150{39M9} 339r22
 340m4*u00151{39M9} 341r22
+342m4*u00152{39M9} 343r22
+344m4*u00153{39M9} 345r22
+346m4*u00154{39M9} 347r22
+348m4*u00155{39M9} 349r22
+350m4*u00156{39M9} 351r22
+352m4*u00157{39M9} 353r22
 X 5 b__main.adb
 10i4 E066{short_integer} 10m46 10r46 186m7 186r15
 11i4 E010{short_integer} 11m46 11r46 189m7 189r15
