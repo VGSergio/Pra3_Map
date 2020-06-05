@@ -4,20 +4,13 @@ b__main.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\default.gpr
 20200603164250
 [BOUND OBJECT FILES]
-<<<<<<< HEAD
+C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\dcua.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\graph_exceptions.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\hashing.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\p_priority_queue.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\d_graph.o
+C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\d_mapa.o
 C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\obj\main.o
-=======
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\graph_exceptions.o
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\hashing.o
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\p_priority_queue.o
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\d_graph.o
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\d_mapa.o
-C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\obj\main.o
->>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
 [GENERATED SOURCE FILES]
 b__main.ads
 b__main.adb

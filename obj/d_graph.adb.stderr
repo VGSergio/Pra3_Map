@@ -1,10 +1,4 @@
 d_graph.adb:149:59: warning: formal parameter "p" is not referenced
-<<<<<<< HEAD
-d_graph.adb:172:07: warning: variable "unvisited" is never read and never assigned
-d_graph.adb:173:07: warning: variable "space" is never read and never assigned
-d_graph.adb:174:07: warning: variable "pos" is never read and never assigned
-=======
 d_graph.adb:173:07: warning: variable "unvisited" is never read and never assigned
 d_graph.adb:174:07: warning: variable "space" is never read and never assigned
 d_graph.adb:175:07: warning: variable "pos" is never read and never assigned
->>>>>>> dd8f8d1c9db6eebf416f0d27b13ecb9c08af5b25
