@@ -1,0 +1,2 @@
+d_min_register.ads:16:35: "nv" is undefined
+d_min_register.ads:16:42: "vertex" is undefined (more references follow)

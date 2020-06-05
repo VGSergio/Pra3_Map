@@ -144,41 +144,41 @@ package body d_graph is
       d:=p.d;
    end get;
    
-   -- Calculates the shortest path from v0 to v in a given graph.
-   -- TO-DO: everything
-   procedure shortest_path(g: in graph; v0, v: in vertex; p: out path) is
-      function smaller(x1,x2: in pcell) return boolean is
-         d1: distance renames x1.d;
-         d2: distance renames x2.d;
-      begin
-         return d1<d2;
-      end smaller;
-      
-      function bigger(x1,x2: in pcell) return boolean is
-         d1: distance renames x1.d;
-         d2: distance renames x2.d;
-      begin
-         return d1>d2;
-      end bigger;
-      
-      package p_heap is new p_priority_queue(size => nv,
-                                             item => pcell,
-                                             "<"  => smaller,
-                                             ">"  => bigger);
-      use p_heap;
-      
-      type heap_space is array(1..nv) of vertex;
-      type pos_heap is array(vertex) of natural;
-      
-      unvisited: priority_queue;
-      space: heap_space;
-      pos: pos_heap;
-      
-   begin
-      for i in 1..nv loop
-         null;
-      end loop;
-      
-   end shortest_path;
+--     -- Calculates the shortest path from v0 to v in a given graph.
+--     -- TO-DO: everything
+--     procedure shortest_path(g: in graph; v0, v: in vertex; p: out single_s_path_register) is
+--        function smaller(x1,x2: in pcell) return boolean is
+--           d1: distance renames x1.d;
+--           d2: distance renames x2.d;
+--        begin
+--           return d1<d2;
+--        end smaller;
+--        
+--        function bigger(x1,x2: in pcell) return boolean is
+--           d1: distance renames x1.d;
+--           d2: distance renames x2.d;
+--        begin
+--           return d1>d2;
+--        end bigger;
+--        
+--        package p_heap is new p_priority_queue(size => nv,
+--                                               item => pcell,
+--                                               "<"  => smaller,
+--                                               ">"  => bigger);
+--        use p_heap;
+--        
+--        type heap_space is array(1..nv) of vertex;
+--        type pos_heap is array(vertex) of natural;
+--        
+--        unvisited: priority_queue;
+--        space: heap_space;
+--        pos: pos_heap;
+--        
+--     begin
+--        for i in 1..nv loop
+--           null;
+--        end loop;
+--        
+--     end shortest_path;
    
 end d_graph;
