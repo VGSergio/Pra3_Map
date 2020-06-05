@@ -10,6 +10,7 @@ package body d_graph is
       end loop;
    end empty;
    
+   -- Creates an edge connecting two vertices.
    procedure put_edge(g: in out graph; x,y: in vertex; d: in distance) is
       p: pcell;
    begin

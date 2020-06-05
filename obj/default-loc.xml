@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <Locations >
   <Project>
+<<<<<<< HEAD
     <vfs_file>C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\default.gpr</vfs_file>
     <file_marker column=" 1" line=" 1" >
       <vfs_project />
@@ -45,6 +46,44 @@
     <file_marker current="true" column=" 30" line=" 95" >
       <vfs_project>C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\default.gpr</vfs_project>
       <vfs_file>C:\Users\andre\Desktop\Andreas\Universidad\A- Estructuras de Datos\Pra3_Map\src\main.adb</vfs_file>
+=======
+    <vfs_file />
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 95" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\d_graph.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 95" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\graph_exceptions.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\d_graph.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\d_graph.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 30" line=" 95" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\main.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 4" line=" 3" >
+      <vfs_project>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\default.gpr</vfs_project>
+      <vfs_file>C:\Users\sergi\OneDrive - Universitat de les Illes Balears\UIB\Segundo\Segundo Cuatrimestre\Estructuras de datos\Programas\Pra3_Map\src\d_mapa.adb</vfs_file>
+>>>>>>> 27401a3f93b408aa1801586a5698234ccdbebdfd
     </file_marker>
   </Project>
   <Project >

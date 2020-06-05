@@ -2,7 +2,7 @@ with Ada.Text_IO;       use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Containers;    use Ada.Containers;
 with Ada.Strings.Hash;
-with hashing; with d_graph;
+with hashing; with d_graph; with d_mapa;
 procedure Main is
 
    --Segunda semana-------------------------
@@ -93,9 +93,9 @@ procedure Main is
       put_edge(g, 1, 4, 5.0);
       put_edge(g, 2, 4, 1.0);
       put_edge(g, 3, 2, 1.0);
-      remove_edge(g, 2, 4);
 
       -- TO-DO: Shortest path from 4 to 1
+
 
       -- Print the vertices connected to 4.
       first(g, 4, it);
@@ -107,6 +107,17 @@ procedure Main is
       end loop;
 
    end Semana_3;
+   -----------------------------------------
+
+   --Cuarta semana--------------------------
+   municipios: String := "municipis_mallorca.txt";
+   distancias: String := "distancies_mallorca.txt";
+
+   procedure Semana_4 (s1,s2: String) is
+      fichero: File_Type;
+   begin
+      null;
+   end Semana_4;
    -----------------------------------------
 
 begin
@@ -121,6 +132,12 @@ begin
    New_Line;
    Put_Line("Tercera Semana");
    Semana_3 (grafo);
+   -----------------------------------------
+
+   --Cuarta semana--------------------------
+   New_Line;
+   Put_Line("Cuarta Semana");
+   Semana_4 (municipios, distancias);
    -----------------------------------------
 
 end Main;
