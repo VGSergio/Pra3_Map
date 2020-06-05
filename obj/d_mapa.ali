@@ -10,9 +10,10 @@ RV NO_EXCEPTIONS
 RV NO_FLOATING_POINT
 RV NO_IO
 RV NO_STANDARD_STORAGE_POOLS
+RV NO_DYNAMIC_SIZED_OBJECTS
 RV NO_IMPLEMENTATION_PRAGMAS
 
-U d_mapa%b		d_mapa.adb		e8d06554 NE OO PK GE IL
+U d_mapa%b		d_mapa.adb		f1fef58c NE OO PK GE IL
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
@@ -44,7 +45,7 @@ D a-unccon.ads		20200228061810 0e9b276f ada.unchecked_conversion%s
 D d_graph.ads		20200605120138 b40545f2 d_graph%s
 D d_graph.adb		20200605104826 2887bbe7 d_graph%b
 D d_mapa.ads		20200605141738 96ca169d d_mapa%s
-D d_mapa.adb		20200605141100 d21cbc30 d_mapa%b
+D d_mapa.adb		20200605150238 cb322ce8 d_mapa%b
 D dcua.ads		20200510125554 7500f4e8 dcua%s
 D dcua.adb		20200510130210 7587c73e dcua%b
 D graph_exceptions.ads	20200604131510 458197ef graph_exceptions%s
@@ -70,19 +71,19 @@ D s-wchcon.ads		20200228061810 1b7d22d2 system.wch_con%s
 G a e
 G c Z s b [d_mapa standard 6 9 none]
 X 1 ada.ads
-16K9*Ada 20e8 16|1r6 1r29 2r6 3r6 3r29 4r6 4r29 132r10 135r11
+16K9*Ada 20e8 16|1r6 1r29 2r6 3r6 3r29 4r6 4r29 131r10 134r11
 X 2 a-contai.ads
-16K13*Containers 28e19 16|1w10 1r33 132r14
-19M9*Hash_Type 16|132r25 135r42
+16K13*Containers 28e19 16|1w10 1r33 131r14
+19M9*Hash_Type 16|131r25 134r42
 X 4 a-flteio.ads
 20K13*Float_Text_IO[11|46] 16|4w10 4r33
 X 7 a-string.ads
-16K13*Strings 35e16 16|2r10 135r15
+16K13*Strings 35e16 16|2r10 134r15
 X 8 a-strhas.ads
-20V22*Hash{2|19M9} 16|2w18 135s23
+20V22*Hash{2|19M9} 16|2w18 134s23
 X 10 a-textio.ads
 57K13*Text_IO 727e16 16|3w10 3r33
-508U14*Put_Line 16|118s7 122s10
+508U14*Put_Line 16|117s7 121s10
 X 13 d_graph.ads
 3i4 size_vertices{positive} 15|37r39
 5k9*d_graph 43e12 15|1w20 37r30
@@ -95,25 +96,25 @@ X 13 d_graph.ads
 14U14 empty 16|11s7[15|37]
 15U14 put_edge 16|71s7[15|37]
 16U14 remove_edge 16|54s10[15|37] 86s7[15|37]
-19U14 first 16|51s7[15|37] 116s7[15|37]
-20U14 next 16|55s10[15|37] 123s10[15|37]
-21V13 is_valid{boolean} 16|52s13[15|37] 119s13[15|37]
-22U14 get 16|53s10[15|37] 120s10[15|37]
+19U14 first 16|51s7[15|37] 115s7[15|37]
+20U14 next 16|55s10[15|37] 122s10[15|37]
+21V13 is_valid{boolean} 16|52s13[15|37] 118s13[15|37]
+22U14 get 16|53s10[15|37] 119s10[15|37]
 31R9 cell
 32P9 pcell(31R9[15|37])
 X 15 d_mapa.ads
 4i4 num_ciutats{natural} 37r56 41r62
-6k9*d_mapa 4z4 37E12 58l5 58e11 16|6b14 145l5 145t11
-8i4*nombre_max_length{positive} 13r25
+6k9*d_mapa 4z4 37E12 58l5 58e11 16|6b14 144l5 144t11
+8i4*nombre_max_length{positive} 13r25 16|108r33
 10R9*mapa 22r31 23r35 24r38 25r38 27r41 28r34 30r37 47c9 50e14 16|8r31 15r35
 . 39r38 62r38 78r41 92r34 102r37
 11F12*distance{float} 26r35 29r36 16|63r35 93r36
 12R9*t_ciutat 15e14 23r52 24r55 25r65 27r68 28r61 30r54 32r25 33r30 41r14
-. 55r51 16|15r52 39r55 62r65 78r68 92r61 102r54 131r25 140r30
-13a7 nombre{string} 16|108m37 109m49 135r30 142r17 142r43
-14i7 longitud{natural} 16|108r54 109r78 142r30 142r56
+. 55r51 16|15r52 39r55 62r65 78r68 92r61 102r54 130r25 139r30
+13a7 nombre{string} 16|116r23 120r38 134r30 141r17 141r43
+14i7 longitud{natural} 16|116r40 120r67 141r30 141r56
 17X4*city_already_exists 16|36r36
-18X4*city_doesnt_exists 16|59r39 74r31 99r31 127r31
+18X4*city_doesnt_exists 16|59r39 74r31 99r31 126r31
 19X4*road_already_exists 16|75r36
 20X4*road_doesnt_exists 16|89r31
 22U14*mapa_buit 22<24 16|8b14 13l8 13t17
@@ -138,15 +139,15 @@ X 15 d_mapa.ads
 28r40 ciutat1{12R9} 16|92b40
 28r49 ciutat2{12R9} 16|92b49
 29f28 km{11F12} 16|93b28
-30U14*imprimir_veinats 30>31 30>43 16|102b14 128l8 128t24
+30U14*imprimir_veinats 30>31 30>43 16|102b14 127l8 127t24
 30r31 m{10R9} 16|102b31 103r34 104r33
-30r43 ciutat{12R9} 16|102b43 108m30 108r30 108r47 113r27
-32V13*Hash{natural} 32>19 32>35 41r48 16|131b13 138l8 138t12
-32r19 k{12R9} 16|131b19 135r28
-32i35 b{positive} 16|131b35 135r52
-33V13*igual{boolean} 33>19 33>23 41r82 16|140b13 143l8 143t13
-33r19 x1{12R9} 16|140b19 142r14 142r27
-33r23 x2{12R9} 16|140b23 142r40 142r53
+30r43 ciutat{12R9} 16|102b43 112r27 116r16 116r33
+32V13*Hash{natural} 32>19 32>35 41r48 16|130b13 137l8 137t12
+32r19 k{12R9} 16|130b19 134r28
+32i35 b{positive} 16|130b35 134r52
+33V13*igual{boolean} 33>19 33>23 41r82 16|139b13 142l8 142t13
+33r19 x1{12R9} 16|139b19 141r14 141r27
+33r23 x2{12R9} 16|139b23 141r40 141r53
 37K12 mapa_graph[13|5] 38r8 44r42 16|71r36
 40K12 mapa_hashing[20|9] 42r8
 44K12 mapa_cua[17|5] 45r8
@@ -155,7 +156,7 @@ X 15 d_mapa.ads
 52r4 qu{17|7R9[44]} 16|12m14 21r25 22r27 23m25 23r25 47m13 47r13
 53i4 next_vertex{13|7I9[37]} 16|26r14 27m10 27r24
 55A9 array_ciudades(12R9)<13|7I9[37]> 56r20
-56a4 lista_ciudades{55A9} 16|33m7 109r30 109r59
+56a4 lista_ciudades{55A9} 16|33m7 120r19 120r48
 X 16 d_mapa.adb
 16r7 ciudades{20|11R9[15|40]} 31r13
 17i7 v{13|7I9[15|37]} 22m10 26m10 31r31 33r22
@@ -173,15 +174,15 @@ X 16 d_mapa.adb
 80a7 carreteras{13|8A9[15|37]} 86r19
 81i7 v1{13|7I9[15|37]} 84m36 86r31
 81i11 v2{13|7I9[15|37]} 85m36 86r35
-103r7 ciudades{20|11R9[15|40]} 113r17
-104a7 carreteras{13|8A9[15|37]} 116r13 120r14 123r15
-105i7 v1{13|7I9[15|37]} 113m35 116r25
-105i11 v2{13|7I9[15|37]} 109r45 109r74 120m30
-106r7 it{13|9R9[15|37]} 116m29 119r22 120r26 123m27 123r27
-108a7 nombre{string} 118r50
-109a7 vecino{string} 122r26
-132m7 h{2|19M9} 135m7 136r19
-133i7 s{natural} 136m7 137r14
+103r7 ciudades{20|11R9[15|40]} 112r17
+104a7 carreteras{13|8A9[15|37]} 115r13 119r14 122r15
+105i7 v1{13|7I9[15|37]} 112m35 115r25
+105i11 v2{13|7I9[15|37]} 119m30 120r34 120r63
+106r7 it{13|9R9[15|37]} 115m29 118r22 119r26 122m27 122r27
+108a7 nombre{string} 116m7 117r50
+108a15 vecino{string} 120m10 121r26
+131m7 h{2|19M9} 134m7 135r19
+132i7 s{natural} 135m7 136r14
 X 17 dcua.ads
 3+9 elem 15|44r34
 5k9*dcua 15|1w34 44r28 17|30e9
@@ -204,10 +205,10 @@ X 20 hashing.ads
 9k9*hashing 15|1w6 40r32 20|49e12
 11R9 conjunto 15|48r17[40] 16|16r17[15|40] 40r17[15|40] 64r17[15|40] 79r17[15|40]
 . 103r17[15|40]
-15X4 no_existe 16|74r12[15|40] 89r12[15|40] 99r12[15|40] 127r12[15|40]
+15X4 no_existe 16|74r12[15|40] 89r12[15|40] 99r12[15|40] 126r12[15|40]
 19U14 cvacio 16|10s7[15|40]
 20U14 poner 16|31s7[15|40]
 21U14 consultar 16|46s7[15|40] 69s7[15|40] 70s7[15|40] 84s7[15|40] 85s7[15|40]
-. 113s7[15|40]
+. 112s7[15|40]
 22U14 borrar 16|48s7[15|40]
 
