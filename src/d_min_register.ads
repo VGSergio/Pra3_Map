@@ -8,16 +8,19 @@ package d_min_register is
    bad_use: exception;
    
    procedure empty(minr: out min_register; pathr: out single_s_path_register);
-   procedure put(minr: out min_register);
-   
+   procedure put(minr: in outmin_register; pathr: in out single_s_path_register;
+                 x, predx: in vertex; dx: in distance); --introduce un elemento en el conjunto o ajusta
+   procedure delete_min(minr: in outmin_register; pthr: in single_s_path_register);
+   function get_min(minr: in min_register) return vertex;
+   function is_empty(minr: in min register) return boolean;
    
 private
    
-   type heap_space is array (1 .. nv) of vertex;
+   type heap_space is array(1..nv) of vertex;
    type pos_heap is array(vertex) of natural;
    type min_register is record
       nh: natural;
-      h: heap_space;
+      h:  heap_space;
       ph: pos_heap;
    end record;
    
