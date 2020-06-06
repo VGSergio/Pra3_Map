@@ -82,6 +82,8 @@ procedure Main is
       it: iterator;
       v: vertex;
       d: distance;
+      pthr: single_s_path_register;
+      pth: path;
    begin
       -- Initialize vertices
       empty(g);
@@ -91,8 +93,14 @@ procedure Main is
       put_edge(g, 2, 4, 1.0);
       put_edge(g, 3, 2, 1.0);
 
-      -- TO-DO: Shortest path from 4 to 1
+      -- Calculate shortest paths.
+      Put_Line("El camino más corto del vértice 4 al 1 es:");
 
+      shortest_paths_sparse(g, 4, pthr);
+      get_path(pthr, 1, pth);
+      print_path(pth);
+
+      New_Line;
 
       -- Print the vertices connected to 4.
       first(g, 4, it);

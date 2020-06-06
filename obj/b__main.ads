@@ -37,7 +37,7 @@ package ada_main is
    pragma Export (C, main, "main");
 
    type Version_32 is mod 2 ** 32;
-   u00001 : constant Version_32 := 16#4599b0e5#;
+   u00001 : constant Version_32 := 16#0725bc67#;
    pragma Export (C, u00001, "mainB");
    u00002 : constant Version_32 := 16#050ff2f0#;
    pragma Export (C, u00002, "system__standard_libraryB");
@@ -305,48 +305,44 @@ package ada_main is
    pragma Export (C, u00133, "ada__strings__hashB");
    u00134 : constant Version_32 := 16#3655ad4c#;
    pragma Export (C, u00134, "ada__strings__hashS");
-   u00135 : constant Version_32 := 16#9cd38837#;
+   u00135 : constant Version_32 := 16#adfe34ea#;
    pragma Export (C, u00135, "d_graphB");
-   u00136 : constant Version_32 := 16#ac475cd5#;
+   u00136 : constant Version_32 := 16#2ec63735#;
    pragma Export (C, u00136, "d_graphS");
    u00137 : constant Version_32 := 16#458197ef#;
    pragma Export (C, u00137, "graph_exceptionsS");
-   u00138 : constant Version_32 := 16#9f155fdb#;
-   pragma Export (C, u00138, "p_priority_queueB");
-   u00139 : constant Version_32 := 16#281ad6ca#;
-   pragma Export (C, u00139, "p_priority_queueS");
-   u00140 : constant Version_32 := 16#e52b5589#;
-   pragma Export (C, u00140, "d_mapaB");
-   u00141 : constant Version_32 := 16#e0dc61ed#;
-   pragma Export (C, u00141, "d_mapaS");
-   u00142 : constant Version_32 := 16#008733d6#;
-   pragma Export (C, u00142, "dcuaB");
-   u00143 : constant Version_32 := 16#7500f4e8#;
-   pragma Export (C, u00143, "dcuaS");
-   u00144 : constant Version_32 := 16#fce3100f#;
-   pragma Export (C, u00144, "hashingB");
-   u00145 : constant Version_32 := 16#dff3156b#;
-   pragma Export (C, u00145, "hashingS");
-   u00146 : constant Version_32 := 16#fd83e873#;
-   pragma Export (C, u00146, "system__concat_2B");
-   u00147 : constant Version_32 := 16#300056e8#;
-   pragma Export (C, u00147, "system__concat_2S");
-   u00148 : constant Version_32 := 16#2b70b149#;
-   pragma Export (C, u00148, "system__concat_3B");
-   u00149 : constant Version_32 := 16#39d0dd9d#;
-   pragma Export (C, u00149, "system__concat_3S");
-   u00150 : constant Version_32 := 16#608e2cd1#;
-   pragma Export (C, u00150, "system__concat_5B");
-   u00151 : constant Version_32 := 16#b5fec216#;
-   pragma Export (C, u00151, "system__concat_5S");
-   u00152 : constant Version_32 := 16#932a4690#;
-   pragma Export (C, u00152, "system__concat_4B");
-   u00153 : constant Version_32 := 16#4cc4aa18#;
-   pragma Export (C, u00153, "system__concat_4S");
-   u00154 : constant Version_32 := 16#e31b7c4e#;
-   pragma Export (C, u00154, "system__memoryB");
-   u00155 : constant Version_32 := 16#6bdde70c#;
-   pragma Export (C, u00155, "system__memoryS");
+   u00138 : constant Version_32 := 16#e52b5589#;
+   pragma Export (C, u00138, "d_mapaB");
+   u00139 : constant Version_32 := 16#625d0a0d#;
+   pragma Export (C, u00139, "d_mapaS");
+   u00140 : constant Version_32 := 16#008733d6#;
+   pragma Export (C, u00140, "dcuaB");
+   u00141 : constant Version_32 := 16#7500f4e8#;
+   pragma Export (C, u00141, "dcuaS");
+   u00142 : constant Version_32 := 16#fce3100f#;
+   pragma Export (C, u00142, "hashingB");
+   u00143 : constant Version_32 := 16#dff3156b#;
+   pragma Export (C, u00143, "hashingS");
+   u00144 : constant Version_32 := 16#fd83e873#;
+   pragma Export (C, u00144, "system__concat_2B");
+   u00145 : constant Version_32 := 16#300056e8#;
+   pragma Export (C, u00145, "system__concat_2S");
+   u00146 : constant Version_32 := 16#2b70b149#;
+   pragma Export (C, u00146, "system__concat_3B");
+   u00147 : constant Version_32 := 16#39d0dd9d#;
+   pragma Export (C, u00147, "system__concat_3S");
+   u00148 : constant Version_32 := 16#608e2cd1#;
+   pragma Export (C, u00148, "system__concat_5B");
+   u00149 : constant Version_32 := 16#b5fec216#;
+   pragma Export (C, u00149, "system__concat_5S");
+   u00150 : constant Version_32 := 16#932a4690#;
+   pragma Export (C, u00150, "system__concat_4B");
+   u00151 : constant Version_32 := 16#4cc4aa18#;
+   pragma Export (C, u00151, "system__concat_4S");
+   u00152 : constant Version_32 := 16#e31b7c4e#;
+   pragma Export (C, u00152, "system__memoryB");
+   u00153 : constant Version_32 := 16#6bdde70c#;
+   pragma Export (C, u00153, "system__memoryS");
 
    --  BEGIN ELABORATION ORDER
    --  ada%s
@@ -495,12 +491,10 @@ package ada_main is
    --  dcua%s
    --  dcua%b
    --  graph_exceptions%s
-   --  hashing%s
-   --  hashing%b
-   --  p_priority_queue%s
-   --  p_priority_queue%b
    --  d_graph%s
    --  d_graph%b
+   --  hashing%s
+   --  hashing%b
    --  d_mapa%s
    --  d_mapa%b
    --  main%b

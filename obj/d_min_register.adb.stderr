@@ -1,0 +1,11 @@
+d_min_register.adb:1:14: missing body for "shortest_paths_sparse" declared at d_min_register.ads:20
+d_min_register.adb:4:11: "dist_table" is undefined (more references follow)
+d_min_register.adb:4:30: invalid prefix in selected component "pathr"
+d_min_register.adb:5:11: "pred_table" is undefined (more references follow)
+d_min_register.adb:5:30: invalid prefix in selected component "pathr"
+d_min_register.adb:9:18: "infty" is undefined (more references follow)
+d_min_register.adb:17:30: invalid prefix in selected component "pathr"
+d_min_register.adb:18:30: invalid prefix in selected component "pathr"
+d_min_register.adb:41:30: invalid prefix in selected component "pthr"
+d_min_register.adb:56:12: "i2" is undefined (more references follow)
+d_min_register.ads:20:42: "graph" is undefined
