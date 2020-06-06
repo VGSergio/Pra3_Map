@@ -19,7 +19,7 @@ U hashing%b		hashing.adb		fce3100f NE OO PK GE IL
 
 U hashing%s		hashing.ads		dff3156b BN EE NE OO PK GE IL
 
-D hashing.ads		20200603164250 dff3156b hashing%s
+D hashing.ads		20200606121116 dff3156b hashing%s
 D hashing.adb		20200605164340 23100564 hashing%b
 D system.ads		20190518041258 32a08138 system%s
 G a e
@@ -27,7 +27,7 @@ G c Z s b [hashing standard 9 9 none]
 X 1 hashing.ads
 3+9 key 5r30 7r30 7r42 20r47 21r47 22r48 28r63 36r10 2|11r47 32r47 47r48
 . 110r63
-4+9 item 20r58 21r59 28r74 37r10 2|11r58 32r59 110r75
+4+9 item 20r58 21r59 28r75 37r10 2|11r58 32r59 110r75
 5V18 hash{natural} 5>24 5>35 2|16s10 37s11 52s10
 5*24 k{3+9}
 5i35 b{positive}

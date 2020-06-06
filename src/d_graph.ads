@@ -23,7 +23,14 @@ package d_graph is
    procedure get (g: in graph; it: in iterator;  y: out vertex;  d: out distance);
       
    type single_s_path_register is limited private;
-   type path is limited private;
+--   type path is limited private;
+   
+   type path_array is array (1..nv) of vertex;
+   type path is record
+      length: distance;
+      steps: natural;
+      p: path_array;
+   end record;
    
    procedure shortest_paths_sparse(g: in graph; v0: in vertex; pthr: out single_s_path_register);
    procedure get_path(pthr: in single_s_path_register; x: in vertex; pth: out path);
@@ -72,13 +79,6 @@ private
    type single_s_path_register is record
       td: dist_table;
       tp: pred_table;
-   end record;
-   
-   type path_array is array (1..nv) of vertex;
-   type path is record
-      length: distance;
-      steps: natural;
-      p: path_array;
    end record;
    
 end d_graph;
