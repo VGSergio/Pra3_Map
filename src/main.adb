@@ -242,6 +242,4 @@ begin
    imprimir_veinats(mallorca, ciudad1);
    delete_ciutat(mallorca, ciudad1);
 
-   bugtest;
-
 end Main;
