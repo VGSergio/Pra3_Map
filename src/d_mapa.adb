@@ -91,10 +91,19 @@ package body d_mapa is
    
    procedure distancia_min(m: in mapa; ciutat1, ciutat2: in t_ciutat;
                            km: out distance) is
+      ciudades: conjunto renames m.ciudades;
+      carreteras: graph renames m.carreteras;
+      v1, v2: vertex;
+      pthr: single_s_path_register;
+      pth: path;
    begin
-
-      null; 
-
+      
+      consultar(ciudades, ciutat1, v1);  --  Obtenemos el vertex que ocupaba la ciudad1
+      consultar(ciudades, ciutat2, v2);  --  Obtenemos el vertex que ocupaba la ciudad2
+      shortest_paths_sparse(carreteras, v1, pthr); -- Obtenemos los caminos mas cortos
+      get_path(pthr, v2, pth);
+      km:= float(get_length(pth)); -- We have to convert it to float because reasons
+      
    exception
       when no_existe => raise city_doesnt_exist;
    end distancia_min;

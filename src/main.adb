@@ -236,13 +236,16 @@ begin
    Put_Line("Cuarta Semana");
 
    --  Carga de datos
-   Semana_4 (municipios, distancias, ';', true);
+   Semana_4 (municipios, distancias, ';', false);
 
    --  Distancia minima
    New_Line;
    ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
    ciudad2:=(nombre => "Sineu                         ", longitud => 5);
    distancia_min(mallorca, ciudad1, ciudad2, distancia);
+   Put("La distancia mínima entre " & ciudad1.nombre(1..ciudad1.longitud)
+       & " y " & ciudad2.nombre(1..ciudad2.longitud) & " es ");
+   Put(distancia, 0, 2, 0); Put_Line("km.");
 
    --  Imprimir vecinos
    New_Line;

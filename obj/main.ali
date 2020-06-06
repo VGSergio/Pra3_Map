@@ -22,7 +22,7 @@ RV NO_IMPLEMENTATION_PRAGMAS
 RV NO_IMPLICIT_LOOPS
 RV SPARK_05
 
-U main%b		main.adb		0725bc67 NE OO SU
+U main%b		main.adb		faa7deea NE OO SU
 W ada%s			ada.ads			ada.ali
 W ada.containers%s	a-contai.ads		a-contai.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -58,10 +58,10 @@ D a-tags.ads		20190518041258 491b781d ada.tags%s
 D a-textio.ads		20190518041258 aef4d56d ada.text_io%s
 D a-tiflio.ads		20190518041256 bf196650 ada.text_io.float_io%s
 D a-unccon.ads		20190518041256 0e9b276f ada.unchecked_conversion%s
-D d_graph.ads		20200606101054 2ec63735 d_graph%s
-D d_graph.adb		20200606101540 684d415d d_graph%b
+D d_graph.ads		20200606104146 e4fb5e2d d_graph%s
+D d_graph.adb		20200606104136 2ed15d3b d_graph%b
 D d_mapa.ads		20200606091648 e668dcbb d_mapa%s
-D d_mapa.adb		20200605172624 af4546cb d_mapa%b
+D d_mapa.adb		20200606105428 9f0bfbbe d_mapa%b
 D dcua.ads		20200605145712 7500f4e8 dcua%s
 D dcua.adb		20200605145712 7587c73e dcua%b
 D graph_exceptions.ads	20200603164250 458197ef graph_exceptions%s
@@ -69,7 +69,7 @@ D hashing.ads		20200603164250 dff3156b hashing%s
 D hashing.adb		20200605164340 23100564 hashing%b
 D interfac.ads		20190518041256 5ab55268 interfaces%s
 D i-cstrea.ads		20190518041256 e53d8b8e interfaces.c_streams%s
-D main.adb		20200606101630 f9ff1a94 main%b
+D main.adb		20200606105036 ce401101 main%b
 D system.ads		20190518041258 32a08138 system%s
 D s-conca2.ads		20190518041256 02a0d7d0 system.concat_2%s
 D s-conca3.ads		20190518041258 0b705ca5 system.concat_3%s
@@ -113,19 +113,19 @@ X 10 a-textio.ads
 114U14*Open 24|48s7 150s7 170s7
 129U14*Close 24|69s7 167s7 215s7
 178V13*Standard_Output{64P9} 24|64s16
-264U14*New_Line 24|65s33 103s7 110s84 211s56 223s4 229s4 235s4 242s4 248s4
+264U14*New_Line 24|65s33 103s7 110s84 211s56 223s4 229s4 235s4 242s4 251s4
 312V13*End_Of_File{boolean} 24|49s17 151s17 171s17
 318U14*Set_Col 24|63s25
-465U14*Put 24|62s13 110s10 110s71 208s13 211s45
+465U14*Put 24|62s13 110s10 110s71 208s13 211s45 246s4
 471U14*Get_Line 24|50s10 152s10 172s10
-508U14*Put_Line 24|97s7 107s7 163s13 224s4 230s4 236s4
+508U14*Put_Line 24|97s7 107s7 163s13 224s4 230s4 236s4 248s29
 X 11 a-tiflio.ads
-82U14*Put 24|65s13[4|20] 110s47[4|20] 211s13[4|20]
+82U14*Put 24|65s13[4|20] 110s47[4|20] 211s13[4|20] 248s4[4|20]
 X 13 d_graph.ads
 3i4 size_vertices{positive} 24|75r45
-5k9*d_graph 83e12 24|5w20 75r36
+5k9*d_graph 84e12 24|5w20 75r36
 7I9 vertex<integer> 24|83r10[75]
-8A9 graph(58P9[24|75]) 24|78r11[75] 80r31[75]
+8A9 graph(59P9[24|75]) 24|78r11[75] 80r31[75]
 9R9 iterator 24|82r11[75]
 10F9 distance<float> 24|84r10[75]
 14U14 empty 24|89s7[75]
@@ -139,8 +139,8 @@ X 13 d_graph.ads
 28U14 shortest_paths_sparse 24|99s7[75]
 29U14 get_path 24|100s7[75]
 30U14 print_path 24|101s7[75]
-57R9 cell
-58P9 pcell(57R9[24|75])
+58R9 cell
+59P9 pcell(58R9[24|75])
 X 15 d_mapa.ads
 5i4 num_ciutats{natural} 24|123r43
 7k9*d_mapa 59e11 24|5w34 123r35
@@ -148,21 +148,23 @@ X 15 d_mapa.ads
 12F12 distance{float} 24|128r31[123] 141r34[123]
 13R9 t_ciutat 24|127r22[123] 130r53[123] 139r25[123]
 14a7 nombre{string} 24|132r43[123] 133m17[123] 153m18[123] 163r58[123] 182m18[123]
-. 193m18[123] 208r50[123] 209r35[123] 243m14[123] 244m14[123] 249m14[123]
+. 193m18[123] 208r50[123] 209r35[123] 243m14[123] 244m14[123] 246r47[123]
+. 247r26[123] 252m14[123]
 15i7 longitud{natural} 24|132r23[123] 154m18[123] 163r76[123] 183m18[123]
-. 194m18[123] 208r68[123] 209r53[123] 243m58[123] 244m58[123] 249m58[123]
+. 194m18[123] 208r68[123] 209r53[123] 243m58[123] 244m58[123] 246r65[123]
+. 247r44[123] 252m58[123]
 23U14 mapa_buit 24|147s7[123]
 24U14 put_ciutat 24|159s10[123]
 24r25 m{11R9[24|123]} 24|159r21[123]
 24r41 ciutat{13R9[24|123]} 24|160r21[123]
-25U14 delete_ciutat 24|251s4[123]
+25U14 delete_ciutat 24|254s4[123]
 26U14 put_carretera 24|202s10[123]
 26r28 m{11R9[24|123]} 24|202r24[123]
 26r44 ciutat1{13R9[24|123]} 24|203r24[123]
 26r53 ciutat2{13R9[24|123]} 24|204r24[123]
 27f28 km{12F12[24|123]} 24|205r24[123]
 29U14 distancia_min 24|245s4[123]
-31U14 imprimir_veinats 24|250s4[123]
+31U14 imprimir_veinats 24|253s4[123]
 X 20 hashing.ads
 3+9 key 24|33r7
 4+9 item 24|33r25
@@ -174,7 +176,7 @@ X 20 hashing.ads
 19U14 cvacio 24|47s7[32]
 20U14 poner 24|67s10[32]
 X 24 main.adb
-6U11*Main 6b11 253l5 253t9
+6U11*Main 6b11 256l5 256t9
 9i4 nombre_max_length{positive} 11r28 44r22 64r39 143r24
 10R9 Municipio 13e14 15r25 27r30 33r14 40r13
 11a7 nombre{string} 19r30 29r17 29r41 57m15 62r22
@@ -214,11 +216,12 @@ X 24 main.adb
 118a4 municipios{string} 239r14
 119a4 distancias{string} 239r26
 123K12 mallorca_d_mapa[15|7] 124r8 128r15 141r18
-126r4 mallorca{15|11R9[123]} 147m17 159m31 159r31 202m35 202r35 245r18 250r21
-. 251m18 251r18
-127r4 ciudad1{15|13R9[123]} 132r35 243m4 245r28 249m4 250r31 251r28
-127r13 ciudad2{15|13R9[123]} 244m4 245r37
-128f4 distancia{15|12F12[123]} 245m46
+126r4 mallorca{15|11R9[123]} 147m17 159m31 159r31 202m35 202r35 245r18 253r21
+. 254m18 254r18
+127r4 ciudad1{15|13R9[123]} 132r35 243m4 245r28 246r39 246r57 252m4 253r31
+. 254r28
+127r13 ciudad2{15|13R9[123]} 244m4 245r37 247r18 247r36
+128f4 distancia{15|12F12[123]} 245m46 248r8
 130U14 rellenar_nombre_ciudad 130b14 130=38 135l8 135t30 156s10 185s10 196s10
 130r38 ciudad{15|13R9[123]} 132r16 133m10
 132i11 I{integer} 133r24

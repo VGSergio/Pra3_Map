@@ -28,6 +28,7 @@ package d_graph is
    procedure shortest_paths_sparse(g: in graph; v0: in vertex; pthr: out single_s_path_register);
    procedure get_path(pthr: in single_s_path_register; x: in vertex; pth: out path);
    procedure print_path(pth: in path);
+   function get_length(pth: in path) return distance;
       
    package d_min_register is
       type min_register is limited private;
