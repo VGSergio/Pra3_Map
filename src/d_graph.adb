@@ -205,11 +205,12 @@ package body d_graph is
       steps: natural renames pth.steps;
       p: path_array renames pth.p;
    begin
+      Put("· Distancia mínima: "); Put(Float(length), 0 ,2, 0); Put_Line(" km.");
+      Put("· Recorrido: ");
       for I in 1..steps-1 loop
-         Put(p(I)'Image & ", ");
+         Put(p(I)'Image & " -");
       end loop;
       Put(p(steps)'Image & "."); New_Line;
-      Put("Coste total: "); Put(Float(length), 0 ,2, 0); Put_Line("km.");
    end print_path;
    
    function get_length(pth: in path) return distance is
