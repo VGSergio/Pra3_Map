@@ -23,7 +23,6 @@ package d_graph is
    procedure get (g: in graph; it: in iterator;  y: out vertex;  d: out distance);
       
    type single_s_path_register is limited private;
---   type path is limited private;
    
    type path_array is array (1..nv) of vertex;
    type path is record
@@ -39,8 +38,10 @@ package d_graph is
       
    package d_min_register is
       type min_register is limited private;
+      
       space_overflow: exception;
       bad_use: exception;
+      
       procedure empty(minr: out min_register; pathr: out single_s_path_register);
       procedure put(minr: in out min_register; pathr: in out single_s_path_register;
                     x, predx: in vertex; dx: in distance);
