@@ -102,7 +102,12 @@ package body d_mapa is
       consultar(ciudades, ciutat2, v2);  --  Obtenemos el vertex que ocupaba la ciudad2
       shortest_paths_sparse(carreteras, v1, pthr); -- Obtenemos los caminos mas cortos
       get_path(pthr, v2, pth);
-      km:= float(get_length(pth)); -- We have to convert it to float because reasons
+      km:= float(get_length(pth)); -- We have to convert it to float
+      
+      -- Imprimimos todas las ciudades por las que pasamos
+      for I in 1..pth.steps loop
+         Put_Line("· " & lista_ciudades(pth.p(I)).nombre(1..lista_ciudades(pth.p(I)).longitud));
+      end loop;
       
    exception
       when no_existe => raise city_doesnt_exist;

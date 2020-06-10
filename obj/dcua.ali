@@ -1,4 +1,4 @@
-V "GNAT Lib v2020"
+V "GNAT Lib v2019"
 A -gnatA
 A -mtune=generic
 A -march=x86-64
@@ -12,14 +12,15 @@ RV NO_LOCAL_ALLOCATORS
 RV NO_STANDARD_STORAGE_POOLS
 RV NO_DEFAULT_INITIALIZATION
 RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
 
 U dcua%b		dcua.adb		008733d6 NE OO PK GE IL
 
 U dcua%s		dcua.ads		7500f4e8 BN EE NE OO PK GE IL
 
-D dcua.ads		20200510125554 7500f4e8 dcua%s
-D dcua.adb		20200510130210 7587c73e dcua%b
-D system.ads		20200228061810 32a08138 system%s
+D dcua.ads		20200605145712 7500f4e8 dcua%s
+D dcua.adb		20200605145712 7587c73e dcua%b
+D system.ads		20190518041258 32a08138 system%s
 G a e
 G c Z s b [dcua standard 5 9 none]
 X 1 dcua.ads

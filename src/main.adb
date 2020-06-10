@@ -215,21 +215,37 @@ procedure Main is
       Close(fichero);
 
    end Semana_4;
+
+   procedure bugtest is
+      c1: t_ciutat:= ("Caca                          ", 4);
+      c2: t_ciutat:= ("Pedo                          ", 4);
+      m: mapa;
+      km: mallorca_d_mapa.distance;
+   begin
+      mapa_buit(m);
+      put_ciutat(m, c1);
+      put_ciutat(m, c2);
+      put_carretera(m, c1, c2, 1.0);
+      distancia_min(m, c1, c2, km);
+   --   delete_ciutat(m, c1);
+      distancia_min(m, c1, c2, km);
+   end bugtest;
+
    -----------------------------------------
 
 begin
 
-   --Segunda semana-------------------------
-   New_Line;
-   Put_Line("Segunda Semana");
-   Obtener_Datos(datos, ';', true);
-   -----------------------------------------
-
-   --Tercera semana-------------------------
-   New_Line;
-   Put_Line("Tercera Semana");
-   Semana_3 (grafo);
-   -----------------------------------------
+--     --Segunda semana-------------------------
+--     New_Line;
+--     Put_Line("Segunda Semana");
+--     Obtener_Datos(datos, ';', true);
+--     -----------------------------------------
+--
+--     --Tercera semana-------------------------
+--     New_Line;
+--     Put_Line("Tercera Semana");
+--     Semana_3 (grafo);
+--     -----------------------------------------
 
    --Cuarta semana--------------------------
    New_Line;
@@ -242,15 +258,17 @@ begin
    New_Line;
    ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
    ciudad2:=(nombre => "Sineu                         ", longitud => 5);
+   Put_Line("La distancia mínima entre " & ciudad1.nombre(1..ciudad1.longitud)
+       & " y " & ciudad2.nombre(1..ciudad2.longitud) & " se consigue pasando por: ");
    distancia_min(mallorca, ciudad1, ciudad2, distancia);
-   Put("La distancia mínima entre " & ciudad1.nombre(1..ciudad1.longitud)
-       & " y " & ciudad2.nombre(1..ciudad2.longitud) & " es ");
-   Put(distancia, 0, 2, 0); Put_Line("km.");
+   Put("Y es de "); Put(distancia, 0, 2, 0); Put_Line("km.");
 
    --  Imprimir vecinos
    New_Line;
    ciudad1:=(nombre => "Felanitx                      ", longitud => 8);
    imprimir_veinats(mallorca, ciudad1);
    delete_ciutat(mallorca, ciudad1);
+
+   --bugtest;
 
 end Main;

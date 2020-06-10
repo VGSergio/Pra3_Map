@@ -25,7 +25,7 @@ package hashing is
    procedure primero (s: in conjunto; it: out iterador);
    procedure siguiente (s: in conjunto; it: in out iterador);
    function es_valido (it: in iterador) return boolean;
-   procedure obtener (s: in conjunto; it: in iterador; k: out key; x:out item);
+   procedure obtener (s: in conjunto; it: in iterador; k: out key; x: out item);
 
 private
 
