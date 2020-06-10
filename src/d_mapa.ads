@@ -1,4 +1,3 @@
---with d_names_table; use d_names_table; 
 with d_graph; with dcua; with hashing;
 generic
    
